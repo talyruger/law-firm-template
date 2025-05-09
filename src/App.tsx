@@ -14,6 +14,7 @@ import Kaitlyn from './pages/attorneys/Kaitlyn';
 import Charlotte from './pages/attorneys/Charlotte';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Disclaimer from './pages/Disclaimer';
+import FAQ from './pages/FAQ';
 import { createAppTheme } from './theme/theme';
 
 function App() {
@@ -64,6 +65,7 @@ function App() {
             <Route path="/attorneys/charlotte" element={<Charlotte />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/disclaimer" element={<Disclaimer />} />
+            <Route path="/faq" element={<FAQ />} />
           </Routes>
         </Box>
         <Footer />

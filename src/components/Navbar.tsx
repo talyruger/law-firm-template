@@ -60,6 +60,7 @@ const CallToAction = styled(Button)(({ theme }) => ({
   padding: '0.5rem 1.5rem',
   marginLeft: '1.5rem',
   borderRadius: '4px',
+  whiteSpace: 'nowrap',
   '&:hover': {
     backgroundColor: theme.palette.primary.dark,
     boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.15)',
@@ -67,6 +68,7 @@ const CallToAction = styled(Button)(({ theme }) => ({
   '& .MuiTypography-root': {
     fontWeight: 700,
     fontSize: '1.1rem',
+    whiteSpace: 'nowrap',
   },
 }));
 
@@ -111,6 +113,7 @@ const Navbar: React.FC = () => {
     { text: 'Home', path: '/' },
     { text: 'Practice Areas', path: '/practice-areas' },
     { text: 'About', path: '/about' },
+    { text: 'FAQ', path: '/faq' },
     { text: 'Contact', path: '/contact' },
   ];
 
@@ -266,6 +269,9 @@ const Navbar: React.FC = () => {
                 </NavLink>
                 <NavLink to="/about">
                   About
+                </NavLink>
+                <NavLink to="/faq">
+                  FAQ
                 </NavLink>
                 <NavLink to="/contact">
                   Contact

@@ -18,6 +18,7 @@ interface PracticeArea {
   icon: React.ReactElement;
   title: string;
   description: string;
+  image: string;
 }
 
 interface Service {
@@ -36,21 +37,25 @@ const practiceAreas: PracticeArea[] = [
     icon: <FamilyRestroomIcon fontSize="large" color="secondary" />,
     title: 'Family Law',
     description: 'We will provide you with the representation you need to resolve family disputes and move forward.',
+    image: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80'
   },
   {
     icon: <GavelIcon fontSize="large" color="secondary" />,
     title: 'Criminal Defense',
     description: 'Our lawyers will help you understand your options and protect your future every step of the way.',
+    image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80'
   },
   {
     icon: <AccountBalanceIcon fontSize="large" color="secondary" />,
     title: 'Estate Planning',
     description: 'We will help you protect your assets and your beneficiaries by planning your estate.',
+    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80'
   },
   {
     icon: <BusinessCenterIcon fontSize="large" color="secondary" />,
     title: 'Business Law',
     description: 'Our attorneys provide legal counsel for business formation, contract disputes, and civil litigation.',
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80'
   },
 ];
 
@@ -126,13 +131,13 @@ const Home: React.FC = () => {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundColor: 'rgba(27, 54, 93, 0.65)',
+            backgroundColor: 'rgba(27, 54, 93, 0.75)',
             zIndex: 1,
           },
           backgroundImage: 'url(/images/franklin-courthouse.jpg)',
           backgroundSize: 'cover',
-          backgroundPosition: 'center 30%',
-          minHeight: '30vh',
+          backgroundPosition: 'center',
+          minHeight: '50vh',
         }}
       >
         <Container 
@@ -185,14 +190,37 @@ const Home: React.FC = () => {
           <Grid container spacing={4}>
             {practiceAreas.map((area) => (
               <Grid item xs={12} sm={6} md={3} key={area.title}>
-                <Paper sx={{ p: 3, height: '100%', bgcolor: 'background.paper' }}>
-                  {area.icon}
-                  <Typography variant="h6" sx={{ mt: 2, mb: 1 }}>
-                    {area.title}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {area.description}
-                  </Typography>
+                <Paper 
+                  sx={{ 
+                    p: 3, 
+                    height: '100%', 
+                    bgcolor: 'background.paper',
+                    position: 'relative',
+                    overflow: 'hidden',
+                    '&::before': {
+                      content: '""',
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      right: 0,
+                      bottom: 0,
+                      backgroundImage: `url(${area.image})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      opacity: 0.1,
+                      zIndex: 0,
+                    },
+                  }}
+                >
+                  <Box sx={{ position: 'relative', zIndex: 1 }}>
+                    {area.icon}
+                    <Typography variant="h6" sx={{ mt: 2, mb: 1 }}>
+                      {area.title}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {area.description}
+                    </Typography>
+                  </Box>
                 </Paper>
               </Grid>
             ))}
