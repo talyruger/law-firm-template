@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, IconButton, Popover, Grid } from '@mui/material';
+import { Box, IconButton, Popover, Grid, Typography, Paper } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import PaletteIcon from '@mui/icons-material/Palette';
 import { useTheme } from '@mui/material/styles';
@@ -19,8 +19,8 @@ const colorOptions: ColorOption[] = [
 ];
 
 const ColorButton = styled(Box)<{ color: string }>(({ color }) => ({
-  width: 30,
-  height: 30,
+  width: 40,
+  height: 40,
   borderRadius: '50%',
   backgroundColor: color,
   cursor: 'pointer',
@@ -52,6 +52,7 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onThemeChange }) => {
   };
 
   const open = Boolean(anchorEl);
+  const id = open ? 'theme-selector-popover' : undefined;
 
   return (
     <>
@@ -67,6 +68,7 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onThemeChange }) => {
         <PaletteIcon />
       </IconButton>
       <Popover
+        id={id}
         open={open}
         anchorEl={anchorEl}
         onClose={handleClose}
@@ -79,19 +81,36 @@ const ThemeSelector: React.FC<ThemeSelectorProps> = ({ onThemeChange }) => {
           horizontal: 'right',
         }}
       >
-        <Box sx={{ p: 2 }}>
+        <Paper sx={{ p: 2, maxWidth: 300 }}>
+          <Typography variant="subtitle1" gutterBottom>
+            Select Theme Color
+          </Typography>
           <Grid container spacing={2}>
             {colorOptions.map((color) => (
-              <Grid item key={color.name}>
-                <ColorButton
-                  color={color.value}
+              <Grid item key={color.name} xs={6}>
+                <Box
                   onClick={() => handleColorSelect(color.value)}
-                  title={color.name}
-                />
+                  sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    cursor: 'pointer',
+                    p: 1,
+                    borderRadius: 1,
+                    '&:hover': {
+                      backgroundColor: 'action.hover',
+                    },
+                  }}
+                >
+                  <ColorButton color={color.value} />
+                  <Typography variant="caption" align="center" sx={{ mt: 1 }}>
+                    {color.name}
+                  </Typography>
+                </Box>
               </Grid>
             ))}
           </Grid>
-        </Box>
+        </Paper>
       </Popover>
     </>
   );

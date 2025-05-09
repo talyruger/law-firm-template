@@ -16,7 +16,7 @@ declare module '@mui/material/styles' {
   }
 }
 
-export const createAppTheme = (primaryColor: string = '#1B365D') => {
+export const createAppTheme = (primaryColor: string = '#1B365D', fontFamily: string = '"Roboto", "Helvetica", "Arial", sans-serif') => {
   // Calculate lighter and darker shades of the primary color
   const lightenColor = (color: string, amount: number) => {
     const num = parseInt(color.replace('#', ''), 16);
@@ -94,34 +94,34 @@ export const createAppTheme = (primaryColor: string = '#1B365D') => {
       },
     },
     typography: {
-      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+      fontFamily: fontFamily,
       h1: {
-        fontFamily: '"Playfair Display", serif',
+        fontFamily: fontFamily,
         fontWeight: 700,
         color: primaryColor,
       },
       h2: {
-        fontFamily: '"Playfair Display", serif',
+        fontFamily: fontFamily,
         fontWeight: 600,
         color: primaryColor,
       },
       h3: {
-        fontFamily: '"Playfair Display", serif',
+        fontFamily: fontFamily,
         fontWeight: 600,
         color: primaryColor,
       },
       h4: {
-        fontFamily: '"Playfair Display", serif',
+        fontFamily: fontFamily,
         fontWeight: 500,
         color: primaryColor,
       },
       h5: {
-        fontFamily: '"Playfair Display", serif',
+        fontFamily: fontFamily,
         fontWeight: 500,
         color: primaryColor,
       },
       h6: {
-        fontFamily: '"Playfair Display", serif',
+        fontFamily: fontFamily,
         fontWeight: 500,
         color: primaryColor,
       },
