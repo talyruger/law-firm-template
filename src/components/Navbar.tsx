@@ -43,7 +43,7 @@ function HideOnScroll(props: Props) {
 
 const NavLink = styled(RouterLink)({
   color: '#1B365D',
-  marginLeft: '2rem',
+  marginLeft: '1.5rem',
   textDecoration: 'none',
   padding: '0.5rem 1rem',
   borderRadius: '4px',
@@ -55,18 +55,19 @@ const NavLink = styled(RouterLink)({
 });
 
 const CallToAction = styled(Button)(({ theme }) => ({
-  marginLeft: '2rem',
   backgroundColor: theme.palette.primary.main,
   color: '#FFFFFF',
-  padding: '0.75rem 1.5rem',
+  padding: '0.5rem 1.5rem',
+  marginLeft: '1.5rem',
   borderRadius: '4px',
-  textTransform: 'none',
-  fontWeight: 500,
   '&:hover': {
     backgroundColor: theme.palette.primary.dark,
-    boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',
+    boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.15)',
   },
-  transition: 'all 0.2s ease-in-out',
+  '& .MuiTypography-root': {
+    fontWeight: 700,
+    fontSize: '1.1rem',
+  },
 }));
 
 const Logo = styled('img')(({ theme }) => ({
@@ -136,6 +137,31 @@ const Navbar: React.FC = () => {
           </ListItemButton>
         </ListItem>
       ))}
+      <ListItem disablePadding>
+        <ListItemButton
+          component="a"
+          href="tel:9197295002"
+          onClick={handleDrawerToggle}
+          sx={{
+            backgroundColor: 'primary.main',
+            color: '#FFFFFF',
+            margin: '1rem',
+            borderRadius: '4px',
+            '&:hover': {
+              backgroundColor: 'primary.dark',
+            },
+          }}
+        >
+          <PhoneIcon sx={{ color: '#FFFFFF', mr: 1 }} />
+          <ListItemText 
+            primary={
+              <Typography variant="body1" sx={{ fontWeight: 700, fontSize: '1.1rem' }}>
+                (919) 729-5002
+              </Typography>
+            } 
+          />
+        </ListItemButton>
+      </ListItem>
     </List>
   );
 
@@ -154,7 +180,8 @@ const Navbar: React.FC = () => {
             disableGutters 
             sx={{ 
               justifyContent: 'space-between',
-              padding: { xs: '0.5rem 1rem', md: '0.5rem 0' }
+              padding: { xs: '0.5rem 1rem', md: '0.5rem 0' },
+              gap: { md: '1.5rem' }
             }}
           >
             <Box 
@@ -180,12 +207,27 @@ const Navbar: React.FC = () => {
 
             {isMobile ? (
               <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                <Box
+                  component="a"
+                  href="tel:9197295002"
+                  sx={{
+                    display: { xs: 'flex', md: 'none' },
+                    textDecoration: 'none',
+                    mr: 2,
+                  }}
+                >
+                  <CallToAction variant="contained" color="primary">
+                    <PhoneIcon sx={{ color: '#FFFFFF', mr: 1 }} />
+                    <Typography variant="body1" component="span">
+                      (919) 729-5002
+                    </Typography>
+                  </CallToAction>
+                </Box>
                 <IconButton
                   color="primary"
                   aria-label="open drawer"
                   edge="end"
                   onClick={handleDrawerToggle}
-                  sx={{ ml: 'auto' }}
                 >
                   <MenuIcon />
                 </IconButton>
@@ -214,6 +256,7 @@ const Navbar: React.FC = () => {
                 padding: '0 1rem',
                 flexGrow: 1,
                 justifyContent: 'flex-end',
+                gap: '1.5rem'
               }}>
                 <NavLink to="/">
                   Home
@@ -235,10 +278,11 @@ const Navbar: React.FC = () => {
                     textDecoration: 'none',
                   }}
                 >
-                  <CallToAction
-                    startIcon={<PhoneIcon sx={{ color: '#FFFFFF' }} />}
-                  >
-                    (919) 729-5002
+                  <CallToAction variant="contained" color="primary">
+                    <PhoneIcon sx={{ color: '#FFFFFF', mr: 1 }} />
+                    <Typography variant="body1" component="span">
+                      (919) 729-5002
+                    </Typography>
                   </CallToAction>
                 </Box>
               </Box>

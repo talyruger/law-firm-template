@@ -202,13 +202,13 @@ const Home: React.FC = () => {
         {/* Firm Introduction */}
         <Paper sx={{ p: 4, mb: 6, bgcolor: 'sectionBackground.accent' }}>
           <Typography variant="h4" gutterBottom>
-            Welcome to Tickle Law Office
+            The Experienced Legal Judgment You Want
           </Typography>
           <Typography paragraph color="text.secondary">
-            Our firm was founded in 2013 by attorney Lawrence Tickle.
+            If you are facing a serious legal matter, you must make an important decision. The attorney you choose can significantly impact the way your legal matter is resolved. It is important to hire a lawyer who will give you the support and counsel you need. It is equally important to hire a lawyer who will treat you with the respect you deserve.
           </Typography>
           <Typography paragraph color="text.secondary">
-            The attorneys at Tickle Law Office help people work through some of life's biggest challenges. We can help you with various legal matters including family law, civil law and criminal law. Whatever your needs, we will do our best to accomplish your specific goals and move toward a brighter future.
+            At Tickle Law Office, our firm's attorneys became lawyers so they could make a positive impact in other people's lives. Based in Louisburg, North Carolina, we serve clients throughout Franklin County, including Youngsville, Bunn and Franklinton.
           </Typography>
         </Paper>
 

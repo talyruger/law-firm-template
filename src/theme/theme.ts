@@ -127,16 +127,34 @@ export const createAppTheme = (primaryColor: string = '#1B365D') => {
       },
     },
     components: {
+      MuiCssBaseline: {
+        styleOverrides: {
+          html: {
+            scrollBehavior: 'smooth',
+          },
+          '*': {
+            transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)',
+          },
+          'a, button': {
+            transition: 'all 0.15s cubic-bezier(0.4, 0, 0.2, 1)',
+          },
+        },
+      },
       MuiButton: {
         styleOverrides: {
           root: {
             textTransform: 'none',
             borderRadius: 4,
+            transition: 'all 0.15s cubic-bezier(0.4, 0, 0.2, 1)',
+            '&:hover': {
+              transform: 'translateY(-1px)',
+            },
           },
           contained: {
-            boxShadow: 'none',
+            boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',
             '&:hover': {
-              boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',
+              boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.15)',
+              transform: 'translateY(-1px)',
             },
           },
         },
@@ -145,7 +163,8 @@ export const createAppTheme = (primaryColor: string = '#1B365D') => {
         styleOverrides: {
           root: {
             backgroundColor: '#FFFFFF',
-            boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.1)',
+            boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.08)',
+            transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)',
           },
         },
       },
@@ -154,8 +173,10 @@ export const createAppTheme = (primaryColor: string = '#1B365D') => {
           root: {
             color: primaryColor,
             textDecoration: 'none',
+            transition: 'all 0.15s cubic-bezier(0.4, 0, 0.2, 1)',
             '&:hover': {
               color: lightenColor(primaryColor, -20),
+              transform: 'translateY(-1px)',
             },
           },
         },
@@ -164,7 +185,12 @@ export const createAppTheme = (primaryColor: string = '#1B365D') => {
         styleOverrides: {
           root: {
             backgroundColor: '#FFFFFF',
-            boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.1)',
+            boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.08)',
+            transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)',
+            '&:hover': {
+              transform: 'translateY(-4px)',
+              boxShadow: '0px 6px 12px rgba(0, 0, 0, 0.12)',
+            },
           },
         },
       },
@@ -172,7 +198,31 @@ export const createAppTheme = (primaryColor: string = '#1B365D') => {
         styleOverrides: {
           root: {
             backgroundColor: '#FFFFFF',
-            boxShadow: '0px 1px 3px rgba(0, 0, 0, 0.1)',
+            boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.08)',
+            transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)',
+            '&:hover': {
+              transform: 'translateY(-4px)',
+              boxShadow: '0px 6px 12px rgba(0, 0, 0, 0.12)',
+            },
+          },
+        },
+      },
+      MuiContainer: {
+        styleOverrides: {
+          root: {
+            '&.MuiContainer-root': {
+              boxShadow: '0px 1px 4px rgba(0, 0, 0, 0.05)',
+              borderRadius: '8px',
+              transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)',
+            },
+          },
+        },
+      },
+      MuiDivider: {
+        styleOverrides: {
+          root: {
+            boxShadow: '0px 1px 2px rgba(0, 0, 0, 0.05)',
+            transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)',
           },
         },
       },
@@ -180,6 +230,7 @@ export const createAppTheme = (primaryColor: string = '#1B365D') => {
         styleOverrides: {
           root: {
             color: primaryColor,
+            transition: 'all 0.15s cubic-bezier(0.4, 0, 0.2, 1)',
           },
         },
       },
@@ -187,8 +238,10 @@ export const createAppTheme = (primaryColor: string = '#1B365D') => {
         styleOverrides: {
           root: {
             color: primaryColor,
+            transition: 'all 0.15s cubic-bezier(0.4, 0, 0.2, 1)',
             '&:hover': {
               backgroundColor: lightenColor(primaryColor, 240),
+              transform: 'scale(1.1)',
             },
           },
         },
