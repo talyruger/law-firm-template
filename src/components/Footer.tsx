@@ -2,8 +2,6 @@ import React from 'react';
 import { Box, Container, Grid, Typography, Link, IconButton, useTheme } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -26,21 +24,31 @@ const Footer: React.FC = () => {
         <Grid container spacing={4}>
           {/* Firm Information */}
           <Grid item xs={12} md={4}>
-            <Typography variant="h6" gutterBottom sx={{ color: primaryColor, fontWeight: 600 }}>
-              Tickle Law Office
-            </Typography>
+            <Box sx={{ mb: 2 }}>
+              <Link component={RouterLink} to="/" sx={{ display: 'inline-block' }}>
+                <img 
+                  src="/images/logo.png" 
+                  alt="Tickle Law Office" 
+                  style={{ 
+                    height: '60px',
+                    maxWidth: '100%'
+                  }} 
+                />
+              </Link>
+            </Box>
             <Typography variant="body2" paragraph sx={{ color: '#4B5563' }}>
               Providing professional legal services with integrity and dedication to our clients.
             </Typography>
             <Box sx={{ display: 'flex', gap: 1 }}>
-              <IconButton color="primary" aria-label="Facebook">
+              <IconButton 
+                color="primary" 
+                aria-label="Facebook" 
+                component="a" 
+                href="https://www.facebook.com/ticklelawoffice/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
                 <FacebookIcon />
-              </IconButton>
-              <IconButton color="primary" aria-label="Twitter">
-                <TwitterIcon />
-              </IconButton>
-              <IconButton color="primary" aria-label="LinkedIn">
-                <LinkedInIcon />
               </IconButton>
             </Box>
           </Grid>
@@ -51,11 +59,31 @@ const Footer: React.FC = () => {
               Quick Links
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+              <Link component={RouterLink} to="/" color="inherit" sx={{ textDecoration: 'none', '&:hover': { color: theme.palette.primary.light } }}>
+                Home
+              </Link>
               <Link component={RouterLink} to="/practice-areas" color="inherit" sx={{ textDecoration: 'none', '&:hover': { color: theme.palette.primary.light } }}>
                 Practice Areas
               </Link>
+              <Box sx={{ pl: 2, display: 'flex', flexDirection: 'column', gap: 0.5 }}>
+                <Link component={RouterLink} to="/practice-areas/family-law" color="inherit" sx={{ textDecoration: 'none', fontSize: '0.9rem', '&:hover': { color: theme.palette.primary.light } }}>
+                  Family Law
+                </Link>
+                <Link component={RouterLink} to="/practice-areas/criminal-defense" color="inherit" sx={{ textDecoration: 'none', fontSize: '0.9rem', '&:hover': { color: theme.palette.primary.light } }}>
+                  Criminal Defense
+                </Link>
+                <Link component={RouterLink} to="/practice-areas/estate-planning" color="inherit" sx={{ textDecoration: 'none', fontSize: '0.9rem', '&:hover': { color: theme.palette.primary.light } }}>
+                  Estate Planning
+                </Link>
+                <Link component={RouterLink} to="/practice-areas/business-law" color="inherit" sx={{ textDecoration: 'none', fontSize: '0.9rem', '&:hover': { color: theme.palette.primary.light } }}>
+                  Business Law
+                </Link>
+              </Box>
               <Link component={RouterLink} to="/about" color="inherit" sx={{ textDecoration: 'none', '&:hover': { color: theme.palette.primary.light } }}>
                 About Us
+              </Link>
+              <Link component={RouterLink} to="/faq" color="inherit" sx={{ textDecoration: 'none', '&:hover': { color: theme.palette.primary.light } }}>
+                FAQ
               </Link>
               <Link component={RouterLink} to="/contact" color="inherit" sx={{ textDecoration: 'none', '&:hover': { color: theme.palette.primary.light } }}>
                 Contact

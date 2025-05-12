@@ -15,6 +15,10 @@ import Charlotte from './pages/attorneys/Charlotte';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Disclaimer from './pages/Disclaimer';
 import FAQ from './pages/FAQ';
+import CriminalDefense from './pages/practice-areas/CriminalDefense';
+import FamilyLaw from './pages/practice-areas/FamilyLaw';
+import BusinessLaw from './pages/practice-areas/BusinessLaw';
+import EstatePlanning from './pages/practice-areas/EstatePlanning';
 import { createAppTheme } from './theme/theme';
 
 function App() {
@@ -59,6 +63,10 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/practice-areas" element={<PracticeAreas />} />
+            <Route path="/practice-areas/criminal-defense" element={<CriminalDefense />} />
+            <Route path="/practice-areas/family-law" element={<FamilyLaw />} />
+            <Route path="/practice-areas/business-law" element={<BusinessLaw />} />
+            <Route path="/practice-areas/estate-planning" element={<EstatePlanning />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/attorneys/lawrence" element={<Lawrence />} />
             <Route path="/attorneys/kaitlyn" element={<Kaitlyn />} />

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Container, Typography, Box, Grid, TextField, Button, Paper, Alert, Link } from '@mui/material';
+import { Container, Grid, Typography, TextField, Button, Box, Paper, Link, Alert } from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-import { Link as RouterLink } from 'react-router-dom';
+import FacebookIcon from '@mui/icons-material/Facebook';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -85,10 +86,43 @@ const Contact: React.FC = () => {
                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
                   <LocationOnIcon sx={{ mr: 2, color: 'primary.main' }} />
                   <Typography>
-                    105 S. Main Street<br />
-                    Louisburg, NC 27549
+                    <Link
+                      href="https://www.google.com/maps/search/?api=1&query=105+S+Main+St+Louisburg+NC+27549"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      sx={{ textDecoration: 'none', color: 'inherit', '&:hover': { color: 'primary.main' } }}
+                    >
+                      105 S. Main Street<br />
+                      Louisburg, NC 27549
+                    </Link>
                   </Typography>
                 </Box>
+                <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                  <FacebookIcon sx={{ mr: 2, color: 'primary.main' }} />
+                  <Typography>
+                    <Link
+                      href="https://www.facebook.com/ticklelawoffice/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      sx={{ textDecoration: 'none', color: 'inherit', '&:hover': { color: 'primary.main' } }}
+                    >
+                      Follow us on Facebook
+                    </Link>
+                  </Typography>
+                </Box>
+              </Box>
+
+              <Box sx={{ mt: 3, mb: 4 }}>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3233.1234567890123!2d-78.30123456789012!3d36.09876543210987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89ac5f1234567890%3A0xabcdef1234567890!2s105%20S%20Main%20St%2C%20Louisburg%2C%20NC%2027549!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0, borderRadius: '4px' }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Tickle Law Office Location"
+                />
               </Box>
 
               <Box sx={{ mt: 4 }}>

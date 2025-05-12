@@ -21,6 +21,8 @@ const practiceAreas = [
       'Property Division',
       'Domestic Violence Protection',
     ],
+    link: '/practice-areas/family-law',
+    image: '/images/practice-areas/family-law.jpg'
   },
   {
     title: 'Criminal Defense',
@@ -34,6 +36,8 @@ const practiceAreas = [
       'White Collar Crimes',
       'Juvenile Defense',
     ],
+    link: '/practice-areas/criminal-defense',
+    image: '/images/practice-areas/criminal-defense.jpg'
   },
   {
     title: 'Estate Planning',
@@ -47,6 +51,8 @@ const practiceAreas = [
       'Probate',
       'Asset Protection',
     ],
+    link: '/practice-areas/estate-planning',
+    image: '/images/practice-areas/estate-planning.jpg'
   },
   {
     title: 'Business Law',
@@ -60,6 +66,8 @@ const practiceAreas = [
       'Employment Law',
       'Business Litigation',
     ],
+    link: '/practice-areas/business-law',
+    image: '/images/practice-areas/business-law.jpg'
   },
 ];
 
@@ -95,24 +103,58 @@ const PracticeAreas: React.FC = () => {
         <Grid container spacing={4}>
           {practiceAreas.map((area) => (
             <Grid item xs={12} md={6} key={area.title}>
-              <Paper sx={{ p: 4, height: '100%' }}>
-                <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
-                  {area.icon}
-                  <Typography variant="h5" sx={{ ml: 2 }}>
-                    {area.title}
-                  </Typography>
-                </Box>
-                <Typography paragraph color="text.secondary">
-                  {area.description}
-                </Typography>
-                <Box component="ul" sx={{ pl: 4 }}>
-                  {area.services.map((service) => (
-                    <Box component="li" key={service} sx={{ mb: 1 }}>
-                      <Typography color="text.secondary">{service}</Typography>
+              <Link
+                component={RouterLink}
+                to={area.link || '#'}
+                sx={{
+                  textDecoration: 'none',
+                  display: 'block',
+                  '&:hover': {
+                    '& .MuiPaper-root': {
+                      boxShadow: 3,
+                    },
+                  },
+                }}
+              >
+                <Paper sx={{ 
+                  p: 4, 
+                  height: '100%',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  '&::before': {
+                    content: '""',
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    backgroundImage: `url(${area.image})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    opacity: 0.1,
+                    zIndex: 0,
+                  },
+                }}>
+                  <Box sx={{ position: 'relative', zIndex: 1 }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
+                      {area.icon}
+                      <Typography variant="h5" sx={{ ml: 2 }}>
+                        {area.title}
+                      </Typography>
                     </Box>
-                  ))}
-                </Box>
-              </Paper>
+                    <Typography paragraph color="text.secondary">
+                      {area.description}
+                    </Typography>
+                    <Box component="ul" sx={{ pl: 4 }}>
+                      {area.services.map((service) => (
+                        <Box component="li" key={service} sx={{ mb: 1 }}>
+                          <Typography color="text.secondary">{service}</Typography>
+                        </Box>
+                      ))}
+                    </Box>
+                  </Box>
+                </Paper>
+              </Link>
             </Grid>
           ))}
         </Grid>
