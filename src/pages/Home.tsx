@@ -1,22 +1,15 @@
 import React from 'react';
-import { Box, Typography, Grid, Card, CardContent, Button, TextField, Checkbox, FormControlLabel, Container, Paper, Link } from '@mui/material';
-import type { GridProps } from '@mui/material';
+import { Box, Typography, Grid, Button, Container, Paper, Link } from '@mui/material';
 import FamilyRestroomIcon from '@mui/icons-material/FamilyRestroom';
 import GavelIcon from '@mui/icons-material/Gavel';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
-import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { Link as RouterLink } from 'react-router-dom';
 import siteContent from '../data/siteContent';
-import PhoneIcon from '@mui/icons-material/Phone';
 import StarIcon from '@mui/icons-material/Star';
-import StarHalfIcon from '@mui/icons-material/StarHalf';
 import GoogleIcon from '@mui/icons-material/Google';
 import Avatar from '@mui/material/Avatar';
-
-const MotionBox = motion(Box);
-const StyledGrid = (props: GridProps) => <Grid {...props} />;
 
 interface PracticeArea {
   icon: React.ReactElement;
@@ -146,13 +139,7 @@ const reviews: Review[] = [
 ];
 
 const Home: React.FC = () => {
-  const { firm, practiceAreas: sitePracticeAreas, team } = siteContent;
-
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    // TODO: Implement form submission logic
-    console.log('Form submitted');
-  };
+  const { firm } = siteContent;
 
   return (
     <>
@@ -297,9 +284,63 @@ const Home: React.FC = () => {
             At Tickle Law Office, our firm's attorneys became lawyers so they could make a positive impact in other people's lives. Based in Louisburg, North Carolina, we serve clients throughout Franklin County, including Youngsville, Bunn and Franklinton.
           </Typography>
         </Paper>
+        
+        {/* Attorney Profiles */}
+        <Paper sx={{ p: 4, mb: 6, bgcolor: 'sectionBackground.accent' }}>
+          <Typography variant="h4" gutterBottom>
+            Our Attorneys
+          </Typography>
+          <Grid container spacing={4}>
+            {attorneys.map((attorney) => (
+              <Grid item xs={12} sm={4} key={attorney.name}>
+                <Link
+                  component={RouterLink}
+                  to={attorney.link}
+                  sx={{
+                    textDecoration: 'none',
+                    display: 'block',
+                    '&:hover': {
+                      '& .MuiPaper-root': {
+                        boxShadow: 3,
+                      },
+                    },
+                  }}
+                >
+                  <Paper sx={{ height: '100%', p: 3, bgcolor: 'background.paper' }}>
+                    <Box
+                      sx={{
+                        height: 300,
+                        width: '100%',
+                        mb: 2,
+                        overflow: 'hidden',
+                        '& img': {
+                          width: '100%',
+                          height: '100%',
+                          objectFit: 'cover',
+                        },
+                      }}
+                    >
+                      <img
+                        src={`/images/${attorney.name.split(' ')[0].toLowerCase()}.jpg`}
+                        alt={attorney.name}
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.src = '/images/placeholder-attorney.jpg';
+                        }}
+                      />
+                    </Box>
+                    <Typography variant="h6" color="primary" align="center">
+                      {attorney.name}
+                    </Typography>
+                  </Paper>
+                </Link>
+              </Grid>
+            ))}
+          </Grid>
+        </Paper>
 
         {/* Google Reviews */}
-        <Paper sx={{ p: 4, mb: 6, bgcolor: 'sectionBackground.light', borderRadius: 2, overflow: 'hidden' }}>
+        <Paper sx={{ p: 4, mb: 0, bgcolor: 'sectionBackground.light', borderRadius: 2, overflow: 'hidden' }}>
           <Box sx={{ 
             display: 'flex', 
             flexDirection: { xs: 'column', sm: 'row' }, 
@@ -496,60 +537,6 @@ const Home: React.FC = () => {
               Read More Reviews on Google
             </Button>
           </Box>
-        </Paper>
-
-        {/* Attorney Profiles */}
-        <Paper sx={{ p: 4, bgcolor: 'sectionBackground.accent' }}>
-          <Typography variant="h4" gutterBottom>
-            Our Attorneys
-          </Typography>
-          <Grid container spacing={4}>
-            {attorneys.map((attorney) => (
-              <Grid item xs={12} sm={4} key={attorney.name}>
-                <Link
-                  component={RouterLink}
-                  to={attorney.link}
-                  sx={{
-                    textDecoration: 'none',
-                    display: 'block',
-                    '&:hover': {
-                      '& .MuiPaper-root': {
-                        boxShadow: 3,
-                      },
-                    },
-                  }}
-                >
-                  <Paper sx={{ height: '100%', p: 3, bgcolor: 'background.paper' }}>
-                    <Box
-                      sx={{
-                        height: 300,
-                        width: '100%',
-                        mb: 2,
-                        overflow: 'hidden',
-                        '& img': {
-                          width: '100%',
-                          height: '100%',
-                          objectFit: 'cover',
-                        },
-                      }}
-                    >
-                      <img
-                        src={`/images/${attorney.name.split(' ')[0].toLowerCase()}.jpg`}
-                        alt={attorney.name}
-                        onError={(e) => {
-                          const target = e.target as HTMLImageElement;
-                          target.src = '/images/placeholder-attorney.jpg';
-                        }}
-                      />
-                    </Box>
-                    <Typography variant="h6" color="primary" align="center">
-                      {attorney.name}
-                    </Typography>
-                  </Paper>
-                </Link>
-              </Grid>
-            ))}
-          </Grid>
         </Paper>
       </Container>
     </>

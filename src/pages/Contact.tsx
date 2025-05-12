@@ -49,62 +49,83 @@ const Contact: React.FC = () => {
       </Box>
 
       <Container maxWidth="lg" sx={{ py: 6 }}>
-        <Grid container spacing={6}>
-          {/* Left Column - Contact Information */}
-          <Grid item xs={12} md={4}>
-            <Paper sx={{ p: 4, height: '100%' }}>
-              <Typography variant="h4" gutterBottom>
-                Contact Us
-              </Typography>
-              <Typography variant="body1" paragraph>
-                While this website provides general information, it does not constitute legal advice. The best way to get guidance on your specific legal issue is to contact a lawyer. To schedule a meeting with an attorney, please call the firm or complete the intake form below.
+        <Paper elevation={3} sx={{ borderRadius: 2, overflow: 'hidden' }}>
+          <Grid container>
+            {/* Left Column - Contact Information */}
+            <Grid item xs={12} md={4} sx={{ 
+              bgcolor: 'primary.dark', 
+              color: 'white',
+              p: { xs: 4, md: 5 },
+              display: 'flex',
+              flexDirection: 'column'
+            }}>
+              <Box 
+                sx={{
+                  borderBottom: '2px solid rgba(255,255,255,0.7)',
+                  pb: 1,
+                  mb: 3
+                }}
+              >
+                <Typography 
+                  variant="h3" 
+                  sx={{
+                    fontWeight: 700,
+                    color: 'white',
+                    letterSpacing: '0.5px',
+                  }}
+                >
+                  Contact Us
+                </Typography>
+              </Box>
+              <Typography variant="body1" paragraph sx={{ color: 'white', fontWeight: '400' }}>
+                While this website provides general information, it does not constitute legal advice. The best way to get guidance on your specific legal issue is to contact a lawyer. To schedule a meeting with an attorney, please call the firm or complete the intake form.
               </Typography>
 
-              <Box sx={{ mt: 4 }}>
-                <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                  <PhoneIcon sx={{ mr: 2, color: 'primary.main' }} />
-                  <Typography>
+              <Box sx={{ mt: 3 }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', mb: 2.5 }}>
+                  <PhoneIcon sx={{ mr: 2, color: 'white' }} />
+                  <Typography sx={{ color: 'white', fontWeight: '500' }}>
                     <a href="tel:9197295002" style={{ textDecoration: 'none', color: 'inherit' }}>
                       (919) 729-5002
                     </a>
                   </Typography>
                 </Box>
-                <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                  <PhoneIcon sx={{ mr: 2, color: 'primary.main' }} />
-                  <Typography>
+                <Box sx={{ display: 'flex', alignItems: 'center', mb: 2.5 }}>
+                  <PhoneIcon sx={{ mr: 2, color: 'white' }} />
+                  <Typography sx={{ color: 'white', fontWeight: '500' }}>
                     Fax: (919) 800-3002
                   </Typography>
                 </Box>
-                <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                  <EmailIcon sx={{ mr: 2, color: 'primary.main' }} />
-                  <Typography>
+                <Box sx={{ display: 'flex', alignItems: 'center', mb: 2.5 }}>
+                  <EmailIcon sx={{ mr: 2, color: 'white' }} />
+                  <Typography sx={{ color: 'white', fontWeight: '500' }}>
                     <a href="mailto:info@ticklelaw.com" style={{ textDecoration: 'none', color: 'inherit' }}>
                       info@ticklelaw.com
                     </a>
                   </Typography>
                 </Box>
-                <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                  <LocationOnIcon sx={{ mr: 2, color: 'primary.main' }} />
-                  <Typography>
+                <Box sx={{ display: 'flex', alignItems: 'center', mb: 2.5 }}>
+                  <LocationOnIcon sx={{ mr: 2, color: 'white' }} />
+                  <Typography sx={{ color: 'white', fontWeight: '500' }}>
                     <Link
                       href="https://www.google.com/maps/search/?api=1&query=105+S+Main+St+Louisburg+NC+27549"
                       target="_blank"
                       rel="noopener noreferrer"
-                      sx={{ textDecoration: 'none', color: 'inherit', '&:hover': { color: 'primary.main' } }}
+                      sx={{ textDecoration: 'none', color: 'inherit', '&:hover': { textDecoration: 'underline' } }}
                     >
                       105 S. Main Street<br />
                       Louisburg, NC 27549
                     </Link>
                   </Typography>
                 </Box>
-                <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                  <FacebookIcon sx={{ mr: 2, color: 'primary.main' }} />
-                  <Typography>
+                <Box sx={{ display: 'flex', alignItems: 'center', mb: 2.5 }}>
+                  <FacebookIcon sx={{ mr: 2, color: 'white' }} />
+                  <Typography sx={{ color: 'white', fontWeight: '500' }}>
                     <Link
                       href="https://www.facebook.com/ticklelawoffice/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      sx={{ textDecoration: 'none', color: 'inherit', '&:hover': { color: 'primary.main' } }}
+                      sx={{ textDecoration: 'none', color: 'inherit', '&:hover': { textDecoration: 'underline' } }}
                     >
                       Follow us on Facebook
                     </Link>
@@ -112,11 +133,11 @@ const Contact: React.FC = () => {
                 </Box>
               </Box>
 
-              <Box sx={{ mt: 3, mb: 4 }}>
+              <Box sx={{ mt: 3, mb: 3 }}>
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3233.1234567890123!2d-78.30123456789012!3d36.09876543210987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89ac5f1234567890%3A0xabcdef1234567890!2s105%20S%20Main%20St%2C%20Louisburg%2C%20NC%2027549!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
                   width="100%"
-                  height="300"
+                  height="200"
                   style={{ border: 0, borderRadius: '4px' }}
                   allowFullScreen
                   loading="lazy"
@@ -125,22 +146,20 @@ const Contact: React.FC = () => {
                 />
               </Box>
 
-              <Box sx={{ mt: 4 }}>
-                <Typography variant="h6" gutterBottom>
+              <Box sx={{ mt: 'auto' }}>
+                <Typography variant="h6" gutterBottom sx={{ color: 'white', fontWeight: '500' }}>
                   Office Hours
                 </Typography>
-                <Typography variant="body2">
+                <Typography variant="body2" sx={{ color: 'white', fontWeight: '400' }}>
                   Monday - Friday: 9:00 AM - 5:00 PM<br />
                   Saturday - Sunday: Closed
                 </Typography>
               </Box>
-            </Paper>
-          </Grid>
+            </Grid>
 
-          {/* Right Column - Contact Form */}
-          <Grid item xs={12} md={8}>
-            <Paper sx={{ p: 4 }}>
-              <Typography variant="h4" gutterBottom>
+            {/* Right Column - Contact Form */}
+            <Grid item xs={12} md={8} sx={{ p: { xs: 4, md: 5 } }}>
+              <Typography variant="h4" gutterBottom color="primary" fontWeight="500">
                 Schedule a Consultation
               </Typography>
               {submitted ? (
@@ -195,7 +214,7 @@ const Contact: React.FC = () => {
                         required
                         fullWidth
                         multiline
-                        rows={4}
+                        rows={5}
                         label="Message"
                         name="message"
                         value={formData.message}
@@ -225,9 +244,9 @@ const Contact: React.FC = () => {
                   </Grid>
                 </form>
               )}
-            </Paper>
+            </Grid>
           </Grid>
-        </Grid>
+        </Paper>
       </Container>
     </>
   );
