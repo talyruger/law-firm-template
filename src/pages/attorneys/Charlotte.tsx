@@ -95,29 +95,38 @@ const Charlotte: React.FC = () => {
                 Attorney
               </Typography>
               <Typography paragraph color="text.secondary">
-                Charlotte Murphy is a dedicated attorney at Tickle Law Office, focusing on criminal defense and civil litigation. With a strong commitment to client advocacy and a track record of success, Charlotte provides effective legal representation for her clients.
+                Charlotte grew up in Franklin County, North Carolina and graduated from Bunn High School in 2016, and went on to attend Appalachian State University. While there, Charlotte played varsity softball and fell in love with the mountains. In 2020, Charlotte graduated from Appalachian State Cum Laude where she received her Bachelor of Science in Political Science and Biology.
               </Typography>
               <Typography paragraph color="text.secondary">
-                Charlotte earned her Juris Doctor from the University of North Carolina School of Law and has been practicing law in North Carolina since 2018. She is a member of the North Carolina Bar Association and the Wake County Bar Association.
+                From there, Charlotte headed deeper into the Appalachian Mountains to West Virginia College of Law. During her time at West Virginia, Charlotte served as the Vice President of the Marly E. Lugar Trial Association Team where she honed in on her leadership and advocacy skills. Additionally, Charlotte completed a summer internship with the West Virgina Legal Aid Office where she received foundational skills that dealt with legal topics such as divorce, domestic violence, property rights, and various other subjects. Charlotte also completed a clerkship with the West Virginia House of Delegates where she gained a well-rounded knowledge of legislative procedures that impact people and the law daily.
+              </Typography>
+              <Typography paragraph color="text.secondary">
+                In 2024, Charlotte obtained her Juris Doctorate and Master of Public Administration degree. Homesick, Charlotte returned to Franklin County and took a job with Tickle Law Office, PLLC where she passed the bar on her first try. Charlotte enjoys helping people, hiking, an occasional run outside, dad jokes, and learning new things.
               </Typography>
             </Paper>
 
             {/* Practice Areas */}
             <Paper sx={{ p: 4, mb: 4 }}>
               <Typography variant="h5" gutterBottom>
-                Practice Areas
+                Past Positions
               </Typography>
-              <Grid container spacing={2}>
-                {['Criminal Defense', 'Civil Litigation', 'Traffic Violations', 'DWI Defense'].map((area) => (
-                  <Grid item xs={12} sm={6} key={area}>
-                    <Paper sx={{ p: 2, bgcolor: 'background.paper' }}>
-                      <Typography variant="body1" color="primary">
-                        {area}
-                      </Typography>
-                    </Paper>
-                  </Grid>
-                ))}
-              </Grid>
+              <Box component="ul" sx={{ pl: 4 }}>
+                <Box component="li" sx={{ mb: 2 }}>
+                  <Typography variant="body1" color="text.secondary">
+                    Tickle Law Office, PLLC
+                  </Typography>
+                </Box>
+                <Box component="li" sx={{ mb: 2 }}>
+                  <Typography variant="body1" color="text.secondary">
+                    West Virginia House of Delegates, Clerkship
+                  </Typography>
+                </Box>
+                <Box component="li">
+                  <Typography variant="body1" color="text.secondary">
+                    West Virgina Legal Aid Office, Summer internship
+                  </Typography>
+                </Box>
+              </Box>
             </Paper>
 
             {/* Education and Bar Admissions */}
@@ -128,12 +137,37 @@ const Charlotte: React.FC = () => {
               <Box component="ul" sx={{ pl: 4 }}>
                 <Box component="li" sx={{ mb: 2 }}>
                   <Typography variant="body1" color="text.secondary">
-                    Juris Doctor, University of North Carolina School of Law
+                    West Virginia University College of Law, Morgantown, West Virginia
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary" sx={{ pl: 2 }}>
+                    • Juris Doctorate - 2024
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary" sx={{ pl: 2 }}>
+                    • Vice President of the Marly E. Lugar Trial Association Team
                   </Typography>
                 </Box>
                 <Box component="li" sx={{ mb: 2 }}>
                   <Typography variant="body1" color="text.secondary">
-                    Bachelor of Arts, University of North Carolina at Chapel Hill
+                    West Virginia University
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary" sx={{ pl: 2 }}>
+                    • Master of Public Administration - 2024
+                  </Typography>
+                </Box>
+                <Box component="li" sx={{ mb: 2 }}>
+                  <Typography variant="body1" color="text.secondary">
+                    Appalachian State University
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary" sx={{ pl: 2 }}>
+                    • Bachelor of Science in Political Science and Biology - 2020
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary" sx={{ pl: 2 }}>
+                    • Graduated Cum Laude
+                  </Typography>
+                </Box>
+                <Box component="li" sx={{ mb: 2 }}>
+                  <Typography variant="body1" color="text.secondary">
+                    Bunn High School - 2016
                   </Typography>
                 </Box>
                 <Box component="li">

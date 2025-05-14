@@ -92,13 +92,26 @@ const Lawrence: React.FC = () => {
                 Lawrence Edward Tickle Jr.
               </Typography>
               <Typography variant="h6" color="secondary" gutterBottom>
-                Founding Attorney
+                Attorney
               </Typography>
               <Typography paragraph color="text.secondary">
-                Lawrence Edward Tickle Jr. is the founding attorney of Tickle Law Office. With over 20 years of experience in family law, criminal defense, and business law, Lawrence has built a reputation for providing exceptional legal representation and personalized service to his clients.
+                Lawrence founded Tickle Law Office in 2013 after graduating from Campbell University School of Law and passing the North Carolina State Bar. Lawrence earned his Bachelor of Science in Political Science from East Carolina University in 2010 as well as his Master of Science in Criminal Justice and Public Administration from Liberty University in 2015. Lawrence served in the United States Marine Corps after high school where he learned the essential leadership and management skills necessary to be successful as a zealous advocate for his clients. A native of Reidsville, NC, Lawrence now calls Franklin County home. He prides himself in fighting for the little guy and helping others. A true problem solver, Lawrence repairs automobiles and other mechanical items in his free time.
               </Typography>
               <Typography paragraph color="text.secondary">
-                Lawrence earned his Juris Doctor from the University of North Carolina School of Law and has been practicing law in North Carolina since 2000. He is a member of the North Carolina Bar Association and the Wake County Bar Association.
+                Lawrence vigorously fights for you in the court room whether it is a misdemeanor, DWI, or felony or whether you are fighting for your children or you livelihood during divorce. If your legal matter is important to you, make an appointment to visit Tickle Law Office by calling the office, filling out the email form or chatting with an agent right now.
+              </Typography>
+            </Paper>
+
+            {/* Current Position */}
+            <Paper sx={{ p: 4, mb: 4 }}>
+              <Typography variant="h5" gutterBottom>
+                Current Position
+              </Typography>
+              <Typography variant="body1" color="text.secondary">
+                Attorney
+              </Typography>
+              <Typography variant="body1" color="text.secondary">
+                Winner Best of The Best 2022 | The Wake Weekly
               </Typography>
             </Paper>
 
@@ -108,7 +121,18 @@ const Lawrence: React.FC = () => {
                 Practice Areas
               </Typography>
               <Grid container spacing={2}>
-                {['Family Law', 'Criminal Defense', 'Business Law', 'Estate Planning'].map((area) => (
+                {[
+                  'Criminal Law',
+                  'Traffic violations',
+                  'Civil Law',
+                  'Family Law',
+                  'Divorce',
+                  'Child Custody and Parenting Time',
+                  'Felonies & Misdemeanors',
+                  'Estate Planning',
+                  'Foreclosure',
+                  'Personal Injury'
+                ].map((area) => (
                   <Grid item xs={12} sm={6} key={area}>
                     <Paper sx={{ p: 2, bgcolor: 'background.paper' }}>
                       <Typography variant="body1" color="primary">
@@ -121,24 +145,85 @@ const Lawrence: React.FC = () => {
             </Paper>
 
             {/* Education and Bar Admissions */}
-            <Paper sx={{ p: 4 }}>
+            <Paper sx={{ p: 4, mb: 4 }}>
               <Typography variant="h5" gutterBottom>
                 Education & Bar Admissions
               </Typography>
               <Box component="ul" sx={{ pl: 4 }}>
                 <Box component="li" sx={{ mb: 2 }}>
                   <Typography variant="body1" color="text.secondary">
-                    Juris Doctor, University of North Carolina School of Law
+                    Campbell University School of Law, Raleigh, North Carolina
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary" sx={{ pl: 2 }}>
+                    • J.D.
                   </Typography>
                 </Box>
                 <Box component="li" sx={{ mb: 2 }}>
                   <Typography variant="body1" color="text.secondary">
-                    Bachelor of Arts, University of North Carolina at Chapel Hill
+                    East Carolina University
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary" sx={{ pl: 2 }}>
+                    • B.S.
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary" sx={{ pl: 2 }}>
+                    • Honors: Dean's List; Senator; Graduated in 2.5 years
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary" sx={{ pl: 2 }}>
+                    • Major: Political Science
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary" sx={{ pl: 2 }}>
+                    • Minor: Economics
+                  </Typography>
+                </Box>
+                <Box component="li" sx={{ mb: 2 }}>
+                  <Typography variant="body1" color="text.secondary">
+                    Liberty University
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary" sx={{ pl: 2 }}>
+                    • M.S.
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary" sx={{ pl: 2 }}>
+                    • Honors: Summa Cum Laude
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary" sx={{ pl: 2 }}>
+                    • Major: Criminal Justice
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary" sx={{ pl: 2 }}>
+                    • Minor: Public Policy
                   </Typography>
                 </Box>
                 <Box component="li">
                   <Typography variant="body1" color="text.secondary">
-                    Admitted to the North Carolina State Bar
+                    North Carolina, 2013
+                  </Typography>
+                </Box>
+              </Box>
+            </Paper>
+
+            {/* Professional Associations */}
+            <Paper sx={{ p: 4 }}>
+              <Typography variant="h5" gutterBottom>
+                Professional Associations
+              </Typography>
+              <Box component="ul" sx={{ pl: 4 }}>
+                <Box component="li" sx={{ mb: 2 }}>
+                  <Typography variant="body1" color="text.secondary">
+                    National Honor Society for Criminal Justice, 2014
+                  </Typography>
+                </Box>
+                <Box component="li" sx={{ mb: 2 }}>
+                  <Typography variant="body1" color="text.secondary">
+                    United States Marine Corps
+                  </Typography>
+                </Box>
+                <Box component="li" sx={{ mb: 2 }}>
+                  <Typography variant="body1" color="text.secondary">
+                    North Carolina Concealed Carry Class, 05/22/2012 to Present
+                  </Typography>
+                </Box>
+                <Box component="li">
+                  <Typography variant="body1" color="text.secondary">
+                    Teen Court/ Wills for Heroes/ Court appointments/ Mentoring/ Pro Bono Legal Aid volunteer
                   </Typography>
                 </Box>
               </Box>

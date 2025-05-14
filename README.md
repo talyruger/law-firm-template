@@ -11,7 +11,6 @@ A modern, professional website for Tickle Law Office built with React, TypeScrip
 - Interactive practice areas showcase
 - Team member profiles
 - Google Maps integration
-- Blog section (coming soon)
 
 ## Tech Stack
 
@@ -24,20 +23,15 @@ A modern, professional website for Tickle Law Office built with React, TypeScrip
 
 ## Prerequisites
 
-- Node.js (v14 or higher)
+- Node.js (v18.x recommended)
 - npm (v6 or higher)
 
 ## Getting Started
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/tickle-law.git
-   cd tickle-law
-   ```
-
+1. Clone the repository
 2. Install dependencies:
    ```bash
-   npm install
+   npm install --legacy-peer-deps
    ```
 
 3. Start the development server:
@@ -51,7 +45,7 @@ A modern, professional website for Tickle Law Office built with React, TypeScrip
 
 ```
 src/
-  ├── components/     # Reusable UI components
+  ├── components/    # Reusable UI components
   ├── pages/         # Main page components
   ├── services/      # API and other services
   ├── theme/         # MUI theme configuration
@@ -64,22 +58,51 @@ src/
 - `npm start` - Runs the app in development mode
 - `npm test` - Launches the test runner
 - `npm run build` - Builds the app for production
-- `npm run eject` - Ejects from Create React App
 
-## Contributing
+## Deployment to Vercel
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+This project is configured for static deployment to Vercel. Follow these steps:
 
-## License
+### Step 1: Build the site locally
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```bash
+# Install dependencies with legacy peer deps flag
+npm install --legacy-peer-deps
+
+# Build the site
+npm run build
+```
+
+### Step 2: Deploy to Vercel
+
+The project includes a properly configured `vercel.json` file for static deployment.
+
+```bash
+# Deploy to preview environment
+vercel --confirm
+
+# Deploy to production
+vercel --prod
+```
+
+## Setting up custom domain
+
+To set up a custom domain:
+
+1. Go to the [Vercel dashboard](https://vercel.com)
+2. Select your project (tickle-law)
+3. Go to "Settings" > "Domains"
+4. Add your custom domain and follow the DNS verification steps
+
+## For future updates
+
+When you update your website:
+
+1. Make your changes to the code
+2. Run `npm run build` locally
+3. Deploy the updated build folder with `vercel --prod`
 
 ## Contact
 
 For any questions or concerns, please contact:
-- Email: info@ticklelawoffice.com
-- Phone: (555) 123-4567 
+- Email: info@ticklelawoffice.com 

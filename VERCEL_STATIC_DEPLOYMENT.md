@@ -14,9 +14,9 @@ npm install --legacy-peer-deps
 npm run build
 ```
 
-### Step 2: Create a Vercel configuration for the static build
+### Step 2: Create a Vercel configuration for static deployment
 
-Create a file named `vercel-static.json` with the following content:
+Create/update `vercel.json` with the following content:
 
 ```json
 {
@@ -36,23 +36,21 @@ Create a file named `vercel-static.json` with the following content:
 }
 ```
 
-### Step 3: Deploy the static build
+### Step 3: Deploy to Vercel
 
 ```bash
-# Copy the configuration to the build directory
-cp vercel-static.json build/vercel.json
-
-# Navigate to the build directory
-cd build
-
-# Deploy to Vercel
+# Deploy to the preview environment
 vercel --confirm
+
+# Deploy to production
+vercel --prod
 ```
 
 ### Successful Deployment
 
 The site is now successfully deployed and available at:
-- [https://tickle-law-static-ax68sxxuu-c-ts-projects-63250766.vercel.app](https://tickle-law-static-ax68sxxuu-c-ts-projects-63250766.vercel.app)
+- Preview: https://tickle-1e5k9gh0a-c-ts-projects-63250766.vercel.app
+- Production: https://tickle-bmxglqb4g-c-ts-projects-63250766.vercel.app
 
 ## Benefits of this approach
 
@@ -65,7 +63,7 @@ The site is now successfully deployed and available at:
 To set up a custom domain:
 
 1. Go to the [Vercel dashboard](https://vercel.com)
-2. Select your project (tickle-law-static)
+2. Select your project (tickle-law)
 3. Go to "Settings" > "Domains"
 4. Add your custom domain and follow the DNS verification steps
 
@@ -75,9 +73,15 @@ When you update your website:
 
 1. Make your changes to the code
 2. Run `npm run build` locally
-3. Deploy the updated build folder using the same method:
+3. Deploy the updated build folder using:
    ```bash
-   cp vercel-static.json build/vercel.json
-   cd build
    vercel --prod
-   ``` 
+   ```
+
+## Troubleshooting
+
+If you encounter issues with the static deployment:
+
+1. Make sure your `vercel.json` has the correct configuration with proper routes
+2. Verify that the build directory contains all required files
+3. Check Vercel deployment logs for any specific errors 

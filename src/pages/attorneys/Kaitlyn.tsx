@@ -95,10 +95,10 @@ const Kaitlyn: React.FC = () => {
                 Attorney
               </Typography>
               <Typography paragraph color="text.secondary">
-                Kaitlyn L. Tickle is an experienced attorney at Tickle Law Office, focusing on family law and estate planning. With a compassionate approach and attention to detail, Kaitlyn helps clients navigate complex legal matters with confidence.
+                Kaitlyn joined Tickle Law Office in 2017 after graduating from North Carolina Central School of Law and passing the North Carolina State Bar. Kaitlyn earned her Bachelor of Science in Elementary Education from East Carolina University in 2010 as well as her Master of Arts in Human Services with a concentration in Marriage and Family Counseling from Liberty University in 2013.
               </Typography>
               <Typography paragraph color="text.secondary">
-                Kaitlyn earned her Juris Doctor from the University of North Carolina School of Law and has been practicing law in North Carolina since 2015. She is a member of the North Carolina Bar Association and the Wake County Bar Association.
+                Kaitlyn taught first and second grade for four years before deciding to make a career change and pursue her law degree. A native of Wake Forest, NC, Kaitlyn now calls Franklin County home. In her free time, Kaitlyn enjoys volunteering with a local animal rescue, Paws for Life.
               </Typography>
             </Paper>
 
@@ -108,7 +108,16 @@ const Kaitlyn: React.FC = () => {
                 Practice Areas
               </Typography>
               <Grid container spacing={2}>
-                {['Family Law', 'Estate Planning', 'Divorce', 'Child Custody'].map((area) => (
+                {[
+                  'Traffic violations',
+                  'Civil Law',
+                  'Family Law',
+                  'Divorce',
+                  'Child Custody and Parenting Time',
+                  'Estate Planning',
+                  'Foreclosure',
+                  'Animal Law'
+                ].map((area) => (
                   <Grid item xs={12} sm={6} key={area}>
                     <Paper sx={{ p: 2, bgcolor: 'background.paper' }}>
                       <Typography variant="body1" color="primary">
@@ -128,17 +137,37 @@ const Kaitlyn: React.FC = () => {
               <Box component="ul" sx={{ pl: 4 }}>
                 <Box component="li" sx={{ mb: 2 }}>
                   <Typography variant="body1" color="text.secondary">
-                    Juris Doctor, University of North Carolina School of Law
+                    North Carolina Central University School of Law, Durham, North Carolina
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary" sx={{ pl: 2 }}>
+                    • Juris Doctor - 2017
                   </Typography>
                 </Box>
                 <Box component="li" sx={{ mb: 2 }}>
                   <Typography variant="body1" color="text.secondary">
-                    Bachelor of Arts, University of North Carolina at Chapel Hill
+                    Liberty University, Lynchburg, Virginia
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary" sx={{ pl: 2 }}>
+                    • Master of Arts in Human Services with a concentration in Marriage and Family Counseling - 2013
+                  </Typography>
+                </Box>
+                <Box component="li" sx={{ mb: 2 }}>
+                  <Typography variant="body1" color="text.secondary">
+                    East Carolina University, Greenville, North Carolina
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary" sx={{ pl: 2 }}>
+                    • Bachelor of Science in Elementary Education - 2010
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary" sx={{ pl: 2 }}>
+                    • Graduated Cum Laude
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary" sx={{ pl: 2 }}>
+                    • Minor in Reading Education
                   </Typography>
                 </Box>
                 <Box component="li">
                   <Typography variant="body1" color="text.secondary">
-                    Admitted to the North Carolina State Bar
+                    Admitted to the North Carolina State Bar - 2017
                   </Typography>
                 </Box>
               </Box>
