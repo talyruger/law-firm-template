@@ -154,7 +154,7 @@ const Home: React.FC = () => {
           position: 'relative',
           color: '#FFFFFF',
           py: 6,
-          textAlign: 'right',
+          textAlign: 'center',
           '&::before': {
             content: '""',
             position: 'absolute',
@@ -162,13 +162,13 @@ const Home: React.FC = () => {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundColor: 'rgba(27, 54, 93, 0.75)',
+            backgroundColor: 'rgba(27, 54, 93, 0.65)',
             zIndex: 1,
           },
           backgroundImage: 'url(/images/franklin-courthouse.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center 10%',
-          minHeight: '50vh',
+          minHeight: '40vh',
         }}
       >
         <Container 
@@ -177,11 +177,12 @@ const Home: React.FC = () => {
             position: 'relative',
             zIndex: 2,
             display: 'flex',
-            justifyContent: 'flex-end',
-            pr: { xs: 2, md: 8 }
+            justifyContent: 'center',
+            alignItems: 'center',
+            minHeight: '40vh'
           }}
         >
-          <Box sx={{ maxWidth: '400px' }}>
+          <Box sx={{ maxWidth: '600px', textAlign: 'center' }}>
             <Typography variant="h3" gutterBottom sx={{ color: '#FFFFFF' }}>
               We're Here For You
             </Typography>
