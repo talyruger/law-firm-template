@@ -3,6 +3,7 @@ import { Container, Grid, Typography, TextField, Button, Box, Paper, Link, Alert
 import { Link as RouterLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import PhoneIcon from '@mui/icons-material/Phone';
+import SmsIcon from '@mui/icons-material/Sms';
 import EmailIcon from '@mui/icons-material/Email';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -84,11 +85,29 @@ const Contact: React.FC = () => {
               <Box sx={{ mt: 3 }}>
                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 2.5 }}>
                   <PhoneIcon sx={{ mr: 2, color: 'white' }} />
-                  <Typography sx={{ color: 'white', fontWeight: '500' }}>
-                    <a href="tel:9197295002" style={{ textDecoration: 'none', color: 'inherit' }}>
-                      (919) 729-5002
-                    </a>
-                  </Typography>
+                  <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+                    <Typography sx={{ color: 'white', fontWeight: '500' }}>
+                      <a href="tel:9194961201" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        (919) 496-1201
+                      </a>
+                    </Typography>
+                    <Typography variant="caption" sx={{ color: 'white', opacity: 0.8 }}>
+                      For calls
+                    </Typography>
+                  </Box>
+                </Box>
+                <Box sx={{ display: 'flex', alignItems: 'center', mb: 2.5 }}>
+                  <SmsIcon sx={{ mr: 2, color: 'white' }} />
+                  <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+                    <Typography sx={{ color: 'white', fontWeight: '500' }}>
+                      <a href="sms:9192299265" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        (919) 229-9265
+                      </a>
+                    </Typography>
+                    <Typography variant="caption" sx={{ color: 'white', opacity: 0.8 }}>
+                      For texting
+                    </Typography>
+                  </Box>
                 </Box>
                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 2.5 }}>
                   <PhoneIcon sx={{ mr: 2, color: 'white' }} />

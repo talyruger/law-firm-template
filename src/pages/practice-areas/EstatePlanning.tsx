@@ -128,12 +128,12 @@ const EstatePlanning: React.FC = () => {
             <Box sx={{ display: 'flex', gap: 2, mt: 4 }}>
               <Button
                 component="a"
-                href="tel:9197295002"
+                href="tel:9194961201"
                 variant="contained"
                 color="primary"
                 startIcon={<PhoneIcon />}
               >
-                (919) 729-5002
+                (919) 496-1201
               </Button>
               <Button
                 component={RouterLink}

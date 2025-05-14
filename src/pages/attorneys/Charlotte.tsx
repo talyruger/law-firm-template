@@ -57,11 +57,12 @@ const Charlotte: React.FC = () => {
               <Box sx={{ mb: 2 }}>
                 <Button
                   component="a"
-                  href="tel:919-729-5002"
+                  href="tel:9194961201"
+                  variant="contained"
+                  color="primary"
                   startIcon={<PhoneIcon />}
-                  sx={{ justifyContent: 'flex-start', width: '100%', mb: 1 }}
                 >
-                  919-729-5002
+                  (919) 496-1201
                 </Button>
                 <Button
                   component="a"

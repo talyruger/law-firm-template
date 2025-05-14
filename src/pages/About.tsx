@@ -2,7 +2,6 @@ import React from 'react';
 import { Box, Typography, Container, Grid, Paper, Button, Link } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import siteContent from '../data/siteContent';
 
 const About: React.FC = () => {
   const attorneys = [
@@ -112,8 +111,8 @@ const About: React.FC = () => {
           <Typography variant="h4" gutterBottom>
             Schedule a Consultation
           </Typography>
-          <Typography paragraph color="text.secondary">
-            Call 919-729-5002 to schedule a consultation. You can also complete our online contact form to get started.
+          <Typography paragraph>
+            Call (919) 496-1201 to schedule a consultation. You can also complete our online contact form to get started.
           </Typography>
           <Button
             component={RouterLink}

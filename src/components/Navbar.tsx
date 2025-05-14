@@ -20,7 +20,7 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import PhoneIcon from '@mui/icons-material/Phone';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import { Link as RouterLink, useLocation } from 'react-router-dom';
+import { Link as RouterLink, useLocation, useNavigate } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
 
 interface Props {
@@ -123,7 +123,7 @@ const CustomDrawer = styled(Drawer)(({ theme }) => ({
   },
 }));
 
-const CustomListItemButton = styled(ListItemButton)(({ theme }) => ({
+const CustomListItemButton = styled(ListItemButton)<{ component?: React.ElementType }>(({ theme }) => ({
   borderRadius: '8px',
   margin: '0.4rem 1rem',
   padding: '0.8rem 1.2rem',
@@ -166,6 +166,7 @@ const Navbar: React.FC = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -181,6 +182,11 @@ const Navbar: React.FC = () => {
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
+  };
+
+  const handleNavigation = (path: string) => {
+    handleDrawerToggle();
+    navigate(path);
   };
 
   const menuItems = [
@@ -223,9 +229,7 @@ const Navbar: React.FC = () => {
         {menuItems.map((item) => (
           <ListItem key={item.text} disablePadding sx={{ mb: 0.8 }}>
             <CustomListItemButton
-              component={RouterLink}
-              to={item.path}
-              onClick={handleDrawerToggle}
+              onClick={() => handleNavigation(item.path)}
               selected={location.pathname === item.path}
             >
               <ListItemText 
@@ -254,7 +258,7 @@ const Navbar: React.FC = () => {
       <Box sx={{ px: 3, mt: 3 }}>
         <Button
           component="a"
-          href="tel:9197295002"
+          href="tel:9194961201"
           onClick={handleDrawerToggle}
           fullWidth
           sx={{
@@ -273,7 +277,7 @@ const Navbar: React.FC = () => {
         >
           <PhoneIcon sx={{ color: '#FFFFFF', mr: 1 }} />
           <Typography variant="body1" sx={{ fontWeight: 600, fontSize: '1.05rem', letterSpacing: '0.5px' }}>
-            (919) 729-5002
+            (919) 496-1201
           </Typography>
         </Button>
       </Box>
@@ -325,7 +329,7 @@ const Navbar: React.FC = () => {
               <Box sx={{ display: 'flex', alignItems: 'center' }}>
                 <Box
                   component="a"
-                  href="tel:9197295002"
+                  href="tel:9194961201"
                   sx={{
                     display: { xs: 'flex', md: 'none' },
                     textDecoration: 'none',
@@ -335,7 +339,7 @@ const Navbar: React.FC = () => {
                   <CallToAction variant="contained" color="primary">
                     <PhoneIcon sx={{ color: '#FFFFFF', mr: 1 }} />
                     <Typography variant="body1" component="span">
-                      (919) 729-5002
+                      (919) 496-1201
                     </Typography>
                   </CallToAction>
                 </Box>
@@ -386,7 +390,7 @@ const Navbar: React.FC = () => {
                 ))}
                 <Box
                   component="a"
-                  href="tel:9197295002"
+                  href="tel:9194961201"
                   sx={{
                     display: { xs: 'none', md: 'block' },
                     textDecoration: 'none',
@@ -395,7 +399,7 @@ const Navbar: React.FC = () => {
                   <CallToAction variant="contained" color="primary">
                     <PhoneIcon sx={{ color: '#FFFFFF', mr: 1 }} />
                     <Typography variant="body1" component="span">
-                      (919) 729-5002
+                      (919) 496-1201
                     </Typography>
                   </CallToAction>
                 </Box>

@@ -49,7 +49,7 @@ const faqItems: FAQItem[] = [
   },
   {
     question: "How do I schedule a consultation?",
-    answer: "Scheduling a consultation is easy and convenient. You can reach us by phone at (919) 729-5002 during our business hours (Monday-Friday, 9 AM - 5 PM), or you can fill out the contact form on our website. We offer both in-person and virtual consultations to accommodate your schedule. During your initial consultation, we'll discuss your legal matter in detail, explain your options, and provide a clear understanding of how we can help. There's no obligation, and all consultations are confidential.",
+    answer: "Scheduling a consultation is easy and convenient. You can reach us by phone at (919) 496-1201 for calls or (919) 229-9265 for texting during our business hours (Monday-Friday, 9 AM - 5 PM), or you can fill out the contact form on our website. We offer both in-person and virtual consultations to accommodate your schedule. During your initial consultation, we'll discuss your legal matter in detail, explain your options, and provide a clear understanding of how we can help. There's no obligation, and all consultations are confidential.",
     category: "General"
   },
   {

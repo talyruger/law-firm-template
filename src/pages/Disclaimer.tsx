@@ -80,7 +80,8 @@ const Disclaimer: React.FC = () => {
             Tickle Law Office<br />
             105 S. Main Street<br />
             Louisburg, NC 27549<br />
-            Phone: 919-729-5002<br />
+            Phone: (919) 496-1201 (calls)<br />
+            Text: (919) 229-9265<br />
             Email: info@ticklelaw.com
           </Typography>
         </Paper>

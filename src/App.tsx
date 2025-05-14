@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ThemeProvider, CssBaseline, Box } from '@mui/material';
 import Navbar from './components/Navbar';
@@ -20,37 +20,29 @@ import FamilyLaw from './pages/practice-areas/FamilyLaw';
 import BusinessLaw from './pages/practice-areas/BusinessLaw';
 import EstatePlanning from './pages/practice-areas/EstatePlanning';
 import { createAppTheme } from './theme/theme';
+import { useScrollToElement } from './hooks/useScrollToElement';
 
 function App() {
   // Get the saved color and font from localStorage or use defaults
   const [primaryColor, setPrimaryColor] = useState(() => {
-    const savedColor = localStorage.getItem('themeColor');
-    return savedColor || '#1B365D';
+    return localStorage.getItem('primaryColor') || '#1B365D';
   });
 
   const [fontFamily, setFontFamily] = useState(() => {
-    const savedFont = localStorage.getItem('themeFont');
-    return savedFont || '"Roboto", "Helvetica", "Arial", sans-serif';
+    return localStorage.getItem('fontFamily') || '"Roboto", "Helvetica", "Arial", sans-serif';
   });
 
-  // Create theme with current primary color and font
   const theme = createAppTheme(primaryColor, fontFamily);
-
-  // Save color and font to localStorage when they change
-  useEffect(() => {
-    localStorage.setItem('themeColor', primaryColor);
-  }, [primaryColor]);
-
-  useEffect(() => {
-    localStorage.setItem('themeFont', fontFamily);
-  }, [fontFamily]);
+  const mainRef = useScrollToElement();
 
   const handleThemeChange = (color: string) => {
     setPrimaryColor(color);
+    localStorage.setItem('primaryColor', color);
   };
 
   const handleFontChange = (font: string) => {
     setFontFamily(font);
+    localStorage.setItem('fontFamily', font);
   };
 
   return (
@@ -58,7 +50,20 @@ function App() {
       <CssBaseline />
       <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         <Navbar />
-        <Box component="main" sx={{ flexGrow: 1 }}>
+        <Box 
+          component="main" 
+          ref={mainRef}
+          sx={{ 
+            flexGrow: 1,
+            outline: 'none', // Remove focus outline but keep focus functionality
+            '&:focus-visible': {
+              outline: '2px solid',
+              outlineColor: 'primary.main',
+              outlineOffset: '-2px',
+            }
+          }}
+          tabIndex={-1} // Make the element focusable
+        >
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
