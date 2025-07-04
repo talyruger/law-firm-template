@@ -161,8 +161,8 @@ const Footer: React.FC = () => {
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                 <PhoneIcon sx={{ color: primaryColor }} />
                 <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-                  <Link href="tel:0000000000" color="inherit" sx={{ textDecoration: 'none', '&:hover': { color: theme.palette.primary.light } }}>
-                    (000) 000-0000
+                  <Link href="tel:5055034455" color="inherit" sx={{ textDecoration: 'none', '&:hover': { color: theme.palette.primary.light } }}>
+                    (505) 503-4455
                   </Link>
                   <Typography variant="caption" sx={{ color: '#4B5563' }}>
                     For calls
@@ -232,4 +232,4 @@ const Footer: React.FC = () => {
   );
 };
 
-export default Footer; 
+export default Footer;

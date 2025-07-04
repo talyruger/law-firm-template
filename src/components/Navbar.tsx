@@ -258,7 +258,7 @@ const Navbar: React.FC = () => {
       <Box sx={{ px: 3, mt: 3 }}>
         <Button
           component="a"
-          href="tel:9194961201"
+          href="tel:5055034455"
           onClick={handleDrawerToggle}
           fullWidth
           sx={{
@@ -277,7 +277,7 @@ const Navbar: React.FC = () => {
         >
           <PhoneIcon sx={{ color: '#FFFFFF', mr: 1 }} />
           <Typography variant="body1" sx={{ fontWeight: 600, fontSize: '1.05rem', letterSpacing: '0.5px' }}>
-            (919) 496-1201
+            (505) 503-4455
           </Typography>
         </Button>
       </Box>
@@ -329,7 +329,7 @@ const Navbar: React.FC = () => {
               <Box sx={{ display: 'flex', alignItems: 'center' }}>
                 <Box
                   component="a"
-                  href="tel:9194961201"
+                  href="tel:5055034455"
                   sx={{
                     display: { xs: 'flex', md: 'none' },
                     textDecoration: 'none',
@@ -339,7 +339,7 @@ const Navbar: React.FC = () => {
                   <CallToAction variant="contained" color="primary">
                     <PhoneIcon sx={{ color: '#FFFFFF', mr: 1 }} />
                     <Typography variant="body1" component="span">
-                      (919) 496-1201
+                      (505) 503-4455
                     </Typography>
                   </CallToAction>
                 </Box>
@@ -390,7 +390,7 @@ const Navbar: React.FC = () => {
                 ))}
                 <Box
                   component="a"
-                  href="tel:9194961201"
+                  href="tel:5055034455"
                   sx={{
                     display: { xs: 'none', md: 'block' },
                     textDecoration: 'none',
@@ -399,7 +399,7 @@ const Navbar: React.FC = () => {
                   <CallToAction variant="contained" color="primary">
                     <PhoneIcon sx={{ color: '#FFFFFF', mr: 1 }} />
                     <Typography variant="body1" component="span">
-                      (919) 496-1201
+                      (505) 503-4455
                     </Typography>
                   </CallToAction>
                 </Box>
@@ -412,4 +412,4 @@ const Navbar: React.FC = () => {
   );
 };
 
-export default Navbar; 
+export default Navbar;

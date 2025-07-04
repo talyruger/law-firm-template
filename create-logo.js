@@ -14,7 +14,7 @@ const createSimpleLogo = () => {
 
 try {
   const logoBuffer = createSimpleLogo();
-  fs.writeFileSync('/Users/ctalekar/DevProjects/tickle-law/public/images/logo.png', logoBuffer);
+  fs.writeFileSync('/Users/ctalekar/DevProjects/law-firm-template/public/images/logo.png', logoBuffer);
   console.log('Generic PNG logo created successfully!');
 } catch (error) {
   console.error('Error creating logo:', error);

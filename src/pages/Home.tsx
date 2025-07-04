@@ -23,6 +23,7 @@ interface Attorney {
   name: string;
   image: string;
   link: string;
+  quote?: string;
 }
 
 interface Review {
@@ -71,19 +72,22 @@ const practiceAreas: PracticeArea[] = [
 
 const attorneys: Attorney[] = [
   { 
-    name: 'Attorney Name 1', 
-    image: '/images/attorney-headshot-1.svg',
-    link: '/attorneys/attorney1'
+    name: 'Ava Patel', 
+    image: '/images/attorney-diverse-1.jpg',
+    link: '/attorneys/attorney1',
+    quote: '“Every client deserves a champion.”'
   },
   { 
-    name: 'Attorney Name 2', 
-    image: '/images/attorney-headshot-2.svg',
-    link: '/attorneys/attorney2'
+    name: 'Maya Lee', 
+    image: '/images/attorney-diverse-2.jpg',
+    link: '/attorneys/attorney2',
+    quote: '“Justice is my mission.”'
   },
   { 
-    name: 'Attorney Name 3', 
-    image: '/images/attorney-headshot-3.svg',
-    link: '/attorneys/attorney3'
+    name: 'Sophia Martinez', 
+    image: '/images/attorney-diverse-3.jpg',
+    link: '/attorneys/attorney3',
+    quote: '“Your future is worth fighting for.”'
   },
 ];
 
@@ -153,7 +157,7 @@ const Home: React.FC = () => {
         >
           <Box sx={{ maxWidth: '600px', textAlign: 'center' }}>
             <Typography variant="h3" gutterBottom sx={{ color: '#FFFFFF' }}>
-              We're Here For You
+              We Are Here to Help You
             </Typography>
             <Typography variant="h6" paragraph sx={{ color: '#FFFFFF' }}>
               Our law firm provides legal solutions for many of the legal issues a family may encounter.
@@ -271,22 +275,31 @@ const Home: React.FC = () => {
                     display: 'block',
                     '&:hover': {
                       '& .MuiPaper-root': {
-                        boxShadow: 3,
+                        boxShadow: 6,
+                        transform: 'scale(1.03)',
+                        transition: 'transform 0.3s, box-shadow 0.3s',
                       },
                     },
                   }}
                 >
-                  <Paper sx={{ height: '100%', p: 3, bgcolor: 'background.paper' }}>
+                  <Paper sx={{ height: '100%', p: 3, transition: 'transform 0.3s, box-shadow 0.3s' }}>
                     <Box
                       sx={{
                         height: 300,
                         width: '100%',
                         mb: 2,
                         overflow: 'hidden',
+                        borderRadius: 3,
+                        boxShadow: 2,
+                        position: 'relative',
                         '& img': {
                           width: '100%',
                           height: '100%',
                           objectFit: 'cover',
+                          transition: 'transform 0.3s',
+                        },
+                        '&:hover img': {
+                          transform: 'scale(1.05)',
                         },
                       }}
                     >
@@ -295,12 +308,15 @@ const Home: React.FC = () => {
                         alt={attorney.name}
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;
-                          target.src = '/images/attorney-headshot-1.svg';
+                          target.src = '/images/attorney-saul-inspired-1.jpg';
                         }}
                       />
                     </Box>
-                    <Typography variant="h6" color="primary" align="center">
+                    <Typography variant="h6" color="primary" align="center" sx={{ fontWeight: 700, letterSpacing: 0.5 }}>
                       {attorney.name}
+                    </Typography>
+                    <Typography variant="body2" align="center" sx={{ color: 'text.secondary', fontStyle: 'italic', mt: 1 }}>
+                      {attorney.quote}
                     </Typography>
                   </Paper>
                 </Link>

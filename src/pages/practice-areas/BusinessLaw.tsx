@@ -132,12 +132,12 @@ const BusinessLaw: React.FC = () => {
             <Box sx={{ display: 'flex', gap: 2, mt: 4 }}>
               <Button
                 component="a"
-                href="tel:0000000000"
+                href="tel:5055034455"
                 variant="contained"
                 color="primary"
                 startIcon={<PhoneIcon />}
               >
-                (919) 496-1201
+                (505) 503-4455
               </Button>
               <Button
                 component={RouterLink}

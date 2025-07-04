@@ -171,7 +171,7 @@ const siteContent: SiteContent = {
       state: "ST",
       zip: "12345"
     },
-    phone: "(000) 000-0000",
+    phone: "(505) 503-4455",
     email: "info@lawfirm.com",
     hours: {
       weekday: "Monday - Friday: 9:00 AM - 5:00 PM",
@@ -180,4 +180,4 @@ const siteContent: SiteContent = {
   }
 };
 
-export default siteContent; 
+export default siteContent;

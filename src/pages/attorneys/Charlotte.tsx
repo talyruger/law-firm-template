@@ -43,13 +43,19 @@ const Attorney3: React.FC = () => {
                 }}
               >
                 <img
-                  src="/images/attorney-headshot-3.svg"
-                  alt="Attorney Name"
+                  src="/images/attorney-diverse-3.jpg"
+                  alt="Sophia Martinez"
+                  style={{ borderRadius: '18px', boxShadow: '0 4px 16px rgba(27,54,93,0.10)', transition: 'transform 0.3s' }}
+                  onMouseOver={e => (e.currentTarget.style.transform = 'scale(1.05)')}
+                  onMouseOut={e => (e.currentTarget.style.transform = 'scale(1)')}
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
-                    target.src = '/images/attorney-headshot-3.svg';
+                    target.src = '/images/attorney-diverse-3.jpg';
                   }}
                 />
+                <Typography variant="body2" align="center" sx={{ color: 'text.secondary', fontStyle: 'italic', mt: 1 }}>
+                  “Your future is worth fighting for.”
+                </Typography>
               </Box>
               <Typography variant="h5" gutterBottom>
                 Contact Information
@@ -57,12 +63,12 @@ const Attorney3: React.FC = () => {
               <Box sx={{ mb: 2 }}>
                 <Button
                   component="a"
-                  href="tel:0000000000"
+                  href="tel:5055034455"
                   variant="contained"
                   color="primary"
                   startIcon={<PhoneIcon />}
                 >
-                  (000) 000-0000
+                  (505) 503-4455
                 </Button>
                 <Button
                   component="a"

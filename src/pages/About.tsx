@@ -5,9 +5,9 @@ import { Helmet } from 'react-helmet-async';
 
 const About: React.FC = () => {
   const attorneys = [
-    { name: 'Attorney Name 1', link: '/attorneys/attorney1', image: '/images/attorney-headshot-1.svg' },
-    { name: 'Attorney Name 2', link: '/attorneys/attorney2', image: '/images/attorney-headshot-2.svg' },
-    { name: 'Attorney Name 3', link: '/attorneys/attorney3', image: '/images/attorney-headshot-3.svg' },
+    { name: 'Ava Patel', link: '/attorneys/attorney1', image: '/images/attorney-diverse-1.jpg', quote: '“Every client deserves a champion.”' },
+    { name: 'Maya Lee', link: '/attorneys/attorney2', image: '/images/attorney-diverse-2.jpg', quote: '“Justice is my mission.”' },
+    { name: 'Sophia Martinez', link: '/attorneys/attorney3', image: '/images/attorney-diverse-3.jpg', quote: '“Your future is worth fighting for.”' },
   ];
 
   const practiceAreas = [
@@ -68,22 +68,31 @@ const About: React.FC = () => {
                     display: 'block',
                     '&:hover': {
                       '& .MuiPaper-root': {
-                        boxShadow: 3,
+                        boxShadow: 6,
+                        transform: 'scale(1.03)',
+                        transition: 'transform 0.3s, box-shadow 0.3s',
                       },
                     },
                   }}
                 >
-                  <Paper sx={{ height: '100%', p: 3 }}>
+                  <Paper sx={{ height: '100%', p: 3, transition: 'transform 0.3s, box-shadow 0.3s' }}>
                     <Box
                       sx={{
                         height: 300,
                         width: '100%',
                         mb: 2,
                         overflow: 'hidden',
+                        borderRadius: 3,
+                        boxShadow: 2,
+                        position: 'relative',
                         '& img': {
                           width: '100%',
                           height: '100%',
                           objectFit: 'cover',
+                          transition: 'transform 0.3s',
+                        },
+                        '&:hover img': {
+                          transform: 'scale(1.05)',
                         },
                       }}
                     >
@@ -92,12 +101,15 @@ const About: React.FC = () => {
                         alt={attorney.name}
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;
-                          target.src = '/images/attorney-headshot-1.svg';
+                          target.src = '/images/attorney-saul-inspired-1.jpg';
                         }}
                       />
                     </Box>
-                    <Typography variant="h6" color="primary" align="center">
+                    <Typography variant="h6" color="primary" align="center" sx={{ fontWeight: 700, letterSpacing: 0.5 }}>
                       {attorney.name}
+                    </Typography>
+                    <Typography variant="body2" align="center" sx={{ color: 'text.secondary', fontStyle: 'italic', mt: 1 }}>
+                      {attorney.quote}
                     </Typography>
                   </Paper>
                 </Link>

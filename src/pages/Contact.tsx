@@ -87,8 +87,8 @@ const Contact: React.FC = () => {
                   <PhoneIcon sx={{ mr: 2, color: 'white' }} />
                   <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                     <Typography sx={{ color: 'white', fontWeight: '500' }}>
-                      <a href="tel:0000000000" style={{ textDecoration: 'none', color: 'inherit' }}>
-                        (000) 000-0000
+                      <a href="tel:5055034455" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        (505) 503-4455
                       </a>
                     </Typography>
                     <Typography variant="caption" sx={{ color: 'white', opacity: 0.8 }}>
@@ -271,4 +271,4 @@ const Contact: React.FC = () => {
   );
 };
 
-export default Contact; 
+export default Contact;
