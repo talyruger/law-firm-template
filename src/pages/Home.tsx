@@ -147,6 +147,11 @@ const Home: React.FC = () => {
         <meta name="description" content="Professional legal services for individuals and businesses. Our experienced attorneys are here to help you with your legal needs." />
       </Helmet>
 
+      {/* Limited-Time Banner (Scarcity/Urgency) */}
+      <Box sx={{ bgcolor: 'primary.dark', color: 'white', py: 1, textAlign: 'center', fontWeight: 600, letterSpacing: 0.5 }}>
+        Only a few free consultations left this week! Book now to secure your spot.
+      </Box>
+
       {/* Hero Section */}
       <Box 
         sx={{ 
@@ -182,11 +187,12 @@ const Home: React.FC = () => {
           }}
         >
           <Box sx={{ maxWidth: '600px', textAlign: 'center' }}>
-            <Typography variant="h3" gutterBottom sx={{ color: '#FFFFFF' }}>
+            <Typography variant="h3" gutterBottom sx={{ color: '#FFFFFF', fontWeight: 800, letterSpacing: 0.5, textShadow: '0 2px 12px rgba(27,54,93,0.25)' }}>
               We Are Here to Help You
             </Typography>
-            <Typography variant="h6" paragraph sx={{ color: '#FFFFFF' }}>
-              Our law firm provides legal solutions for many of the legal issues a family may encounter.
+            <Typography variant="h6" paragraph sx={{ color: '#FFFFFF', fontWeight: 500, fontSize: '1.35rem', textShadow: '0 1px 8px rgba(27,54,93,0.18)', mb: 3 }}>
+              Trusted by families across the region.<br/>
+              <span style={{ color: '#FFD700', fontWeight: 700 }}>Get clarity, confidence, and peace of mind</span>—our award-winning attorneys solve the legal issues that matter most to you.
             </Typography>
             <Button 
               component={RouterLink}
@@ -198,20 +204,36 @@ const Home: React.FC = () => {
                 px: 3,
                 py: 1,
                 fontSize: '1rem',
-                backgroundColor: undefined, // Remove any custom color
-                color: undefined, // Remove any custom color
+                backgroundColor: 'white',
+                color: 'primary.main',
+                fontWeight: 600,
+                boxShadow: 3,
+                transition: 'box-shadow 0.2s, background 0.2s, color 0.2s',
                 '&:hover': {
-                  backgroundColor: undefined,
+                  backgroundColor: 'grey.100',
+                  color: 'primary.dark',
+                  boxShadow: 6,
+                  transform: 'scale(1.04)'
                 },
               }}
             >
               Schedule a Consultation
             </Button>
+            <Typography variant="caption" sx={{ display: 'block', mt: 2, color: '#FFD700', fontWeight: 600, letterSpacing: 0.2, textShadow: '0 1px 6px rgba(27,54,93,0.12)' }}>
+              98% of clients say they felt more confident after their first call
+            </Typography>
           </Box>
         </Container>
       </Box>
 
       <Container maxWidth="lg" sx={{ py: 6 }}>
+        {/* 2. Curiosity Gap Teaser (above practice areas) */}
+        <Paper sx={{ p: 3, mb: 4, bgcolor: 'sectionBackground.accent', textAlign: 'center', borderRadius: 2 }}>
+          <Typography variant="h6" sx={{ fontWeight: 600, color: 'primary.main' }}>
+            Are you making the #1 mistake most people make in legal matters? Find out in your free consultation!
+          </Typography>
+        </Paper>
+
         {/* Practice Areas */}
         <Paper sx={{ p: 4, mb: 6, bgcolor: 'sectionBackground.light' }}>
           <Typography variant="h4" gutterBottom>
@@ -369,8 +391,39 @@ const Home: React.FC = () => {
           </Grid>
         </Paper>
 
-        {/* Free Consultation CTA */}
-        <Paper sx={{ p: 4, mb: 6, bgcolor: 'primary.main', color: 'white', textAlign: 'center', borderRadius: 2 }}>
+        {/* 4. Loss Aversion Message (before testimonials) */}
+        <Paper sx={{ p: 3, mb: 4, bgcolor: 'sectionBackground.light', color: 'primary.dark', textAlign: 'center', borderRadius: 2, border: '1px solid', borderColor: 'divider' }}>
+          <Typography variant="h6" sx={{ fontWeight: 600, color: 'primary.main' }}>
+            Don’t risk missing important deadlines or losing your rights. Contact us today to protect your future.
+          </Typography>
+        </Paper>
+
+        {/* 5. Free Legal Checklist Download (Reciprocity) */}
+        <Paper sx={{ p: 3, mb: 6, bgcolor: 'sectionBackground.light', textAlign: 'center', borderRadius: 2, border: '1px solid', borderColor: 'divider' }}>
+          <Typography variant="h6" gutterBottom color="primary.main">
+            Free Download: Essential Legal Checklist
+          </Typography>
+          <Typography variant="body2" color="text.secondary" gutterBottom>
+            Get our exclusive checklist to avoid common legal pitfalls. Enter your email to receive your copy instantly.
+          </Typography>
+          <form style={{ display: 'flex', flexDirection: 'column', gap: 12, maxWidth: 400, margin: '0 auto' }}>
+            <input type="email" placeholder="Your Email" style={{ padding: 8, borderRadius: 4, border: '1px solid #ccc' }} />
+            <Button type="submit" variant="contained" color="primary" sx={{ fontWeight: 600, boxShadow: 2, transition: 'box-shadow 0.2s', ':hover': { boxShadow: 4 } }}>
+              Download Now
+            </Button>
+          </form>
+        </Paper>
+
+        {/* 7. Multi-Step Progress Bar for Consultation (Zeigarnik Effect) */}
+        <Paper sx={{ p: 4, mb: 6, bgcolor: 'primary.main', color: 'white', textAlign: 'center', borderRadius: 2, position: 'relative' }}>
+          <Box sx={{ width: '100%', mb: 2 }}>
+            <Box sx={{ width: '60%', mx: 'auto', height: 8, bgcolor: 'grey.300', borderRadius: 4, overflow: 'hidden' }}>
+              <Box sx={{ width: '33%', height: '100%', bgcolor: 'secondary.main', transition: 'width 0.5s' }} />
+            </Box>
+            <Typography variant="caption" sx={{ color: 'white', fontWeight: 500 }}>
+              Step 1 of 3: Schedule Your Free Consultation
+            </Typography>
+          </Box>
           <Typography variant="h4" gutterBottom>
             Schedule Your Free Consultation
           </Typography>
@@ -382,12 +435,35 @@ const Home: React.FC = () => {
             to="/contact"
             variant="contained"
             size="large"
-            sx={{ mt: 2, px: 4, py: 1.5, fontSize: '1.1rem', fontWeight: 600 }}
+            sx={{
+              mt: 2,
+              px: 4,
+              py: 1.5,
+              fontSize: '1.1rem',
+              fontWeight: 600,
+              boxShadow: 3,
+              backgroundColor: 'white',
+              color: 'primary.main',
+              transition: 'box-shadow 0.2s, background 0.2s, color 0.2s',
+              ':hover': {
+                boxShadow: 6,
+                backgroundColor: 'grey.100',
+                color: 'primary.dark',
+                transform: 'scale(1.04)'
+              }
+            }}
           >
             Book Now
           </Button>
         </Paper>
       </Container>
+
+      <style>{`
+      @keyframes pulse {
+        0% { box-shadow: 0 0 0 0 rgba(27,54,93,0.3); }
+        70% { box-shadow: 0 0 0 12px rgba(27,54,93,0); }
+        100% { box-shadow: 0 0 0 0 rgba(27,54,93,0); }
+      }`}</style>
     </>
   );
 };
