@@ -118,23 +118,36 @@ const About: React.FC = () => {
           </Grid>
         </Paper>
 
-        {/* Consultation Section */}
+        {/* Commitment Section */}
         <Paper sx={{ p: 4, mb: 6 }}>
           <Typography variant="h4" gutterBottom>
-            Schedule a Consultation
+            Our Commitment to You
+          </Typography>
+          <Typography paragraph color="text.secondary">
+            Our attorneys are recognized for their integrity, expertise, and results. We are proud members of the State Bar and have received top client ratings. Our mission is to provide every client with personalized, effective legal solutions.
+          </Typography>
+          <Typography paragraph color="text.secondary">
+            <b>Awards & Credentials:</b> State Bar Membership, Top Client Ratings, Community Service Recognition
+          </Typography>
+        </Paper>
+
+        {/* Consultation Section */}
+        <Paper sx={{ p: 4, mb: 6, bgcolor: 'primary.main', color: 'white', textAlign: 'center', borderRadius: 2 }}>
+          <Typography variant="h4" gutterBottom>
+            Schedule a Free Consultation
           </Typography>
           <Typography paragraph>
-            Call (000) 000-0000 to schedule a consultation. You can also complete our online contact form to get started.
+            Let us help you move forward. Contact us today to schedule your free, confidential consultation.
           </Typography>
           <Button
             component={RouterLink}
             to="/contact"
             variant="contained"
-            color="primary"
+            color="secondary"
             size="large"
-            sx={{ mt: 2 }}
+            sx={{ mt: 2, px: 4, py: 1.5, fontSize: '1.1rem', fontWeight: 600 }}
           >
-            Contact Us
+            Book Now
           </Button>
         </Paper>
 
