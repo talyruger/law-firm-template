@@ -1,6 +1,6 @@
-# Tickle Law Office Website
+# Law Firm Website Template
 
-A modern, professional website for Tickle Law Office built with React, TypeScript, and Material-UI.
+A modern, professional website template for law firms built with React, TypeScript, and Material-UI.
 
 ## Features
 
@@ -41,68 +41,14 @@ A modern, professional website for Tickle Law Office built with React, TypeScrip
 
 4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Project Structure
+## Deployment
 
-```
-src/
-  ├── components/    # Reusable UI components
-  ├── pages/         # Main page components
-  ├── services/      # API and other services
-  ├── theme/         # MUI theme configuration
-  ├── App.tsx        # Main application component
-  └── index.tsx      # Entry point
-```
+You can deploy this template to any static hosting provider (e.g., Vercel, Netlify, GitHub Pages).
 
-## Available Scripts
+## Customization
 
-- `npm start` - Runs the app in development mode
-- `npm test` - Launches the test runner
-- `npm run build` - Builds the app for production
-
-## Deployment to Vercel
-
-This project is configured for static deployment to Vercel. Follow these steps:
-
-### Step 1: Build the site locally
-
-```bash
-# Install dependencies with legacy peer deps flag
-npm install --legacy-peer-deps
-
-# Build the site
-npm run build
-```
-
-### Step 2: Deploy to Vercel
-
-The project includes a properly configured `vercel.json` file for static deployment.
-
-```bash
-# Deploy to preview environment
-vercel --confirm
-
-# Deploy to production
-vercel --prod
-```
-
-## Setting up custom domain
-
-To set up a custom domain:
-
-1. Go to the [Vercel dashboard](https://vercel.com)
-2. Select your project (tickle-law)
-3. Go to "Settings" > "Domains"
-4. Add your custom domain and follow the DNS verification steps
-
-## For future updates
-
-When you update your website:
-
-1. Make your changes to the code
-2. Run `npm run build` locally
-3. Deploy the updated build folder with `vercel --prod`
+Replace placeholder content, images, and contact information with your law firm's details.
 
 ## Contact
 
-For any questions or concerns, please contact:
-- Email: info@ticklelawoffice.com 
+For questions about using this template, please open an issue on the repository.

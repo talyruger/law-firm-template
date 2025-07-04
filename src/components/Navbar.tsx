@@ -202,8 +202,8 @@ const Navbar: React.FC = () => {
       <Box sx={{ display: 'flex', justifyContent: 'center', mb: 2 }}>
         <Box 
           component="img"
-          src="/images/logo.png"
-          alt="Tickle Law Office Logo"
+          src="/images/logo-new.svg"
+          alt="Law Firm Logo"
           sx={{ 
             height: 70, 
             mb: 1,
@@ -222,7 +222,7 @@ const Navbar: React.FC = () => {
           letterSpacing: '0.5px',
         }}
       >
-        Tickle Law Office
+        Law Firm
       </Typography>
       
       <List sx={{ px: 1 }}>
@@ -316,8 +316,8 @@ const Navbar: React.FC = () => {
               }}
             >
               <Logo 
-                src="/images/logo.png" 
-                alt="Tickle Law Office Logo"
+                src="/images/logo-new.svg" 
+                alt="Law Firm Logo"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.style.display = 'none';

@@ -73,9 +73,9 @@ function App() {
             <Route path="/practice-areas/business-law" element={<BusinessLaw />} />
             <Route path="/practice-areas/estate-planning" element={<EstatePlanning />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/attorneys/lawrence" element={<Lawrence />} />
-            <Route path="/attorneys/kaitlyn" element={<Kaitlyn />} />
-            <Route path="/attorneys/charlotte" element={<Charlotte />} />
+            <Route path="/attorneys/attorney1" element={<Lawrence />} />
+            <Route path="/attorneys/attorney2" element={<Kaitlyn />} />
+            <Route path="/attorneys/attorney3" element={<Charlotte />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/disclaimer" element={<Disclaimer />} />
             <Route path="/faq" element={<FAQ />} />

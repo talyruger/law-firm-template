@@ -43,8 +43,8 @@ const Footer: React.FC = () => {
             <Box sx={{ mb: 2 }}>
               <Link component={RouterLink} to="/" sx={{ display: 'inline-block' }}>
                 <img 
-                  src="/images/logo.png" 
-                  alt="Tickle Law Office" 
+                  src="/images/logo-new.svg" 
+                  alt="Law Firm" 
                   style={{ 
                     height: '60px',
                     maxWidth: '100%'
@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
                 color="primary" 
                 aria-label="Facebook" 
                 component="a" 
-                href="https://www.facebook.com/ticklelawoffice/" 
+                href="#" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
@@ -161,8 +161,8 @@ const Footer: React.FC = () => {
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                 <PhoneIcon sx={{ color: primaryColor }} />
                 <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-                  <Link href="tel:9194961201" color="inherit" sx={{ textDecoration: 'none', '&:hover': { color: theme.palette.primary.light } }}>
-                    (919) 496-1201
+                  <Link href="tel:0000000000" color="inherit" sx={{ textDecoration: 'none', '&:hover': { color: theme.palette.primary.light } }}>
+                    (000) 000-0000
                   </Link>
                   <Typography variant="caption" sx={{ color: '#4B5563' }}>
                     For calls
@@ -172,8 +172,8 @@ const Footer: React.FC = () => {
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                 <SmsIcon sx={{ color: primaryColor }} />
                 <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-                  <Link href="sms:9192299265" color="inherit" sx={{ textDecoration: 'none', '&:hover': { color: theme.palette.primary.light } }}>
-                    (919) 229-9265
+                  <Link href="sms:0000000000" color="inherit" sx={{ textDecoration: 'none', '&:hover': { color: theme.palette.primary.light } }}>
+                    (000) 000-0000
                   </Link>
                   <Typography variant="caption" sx={{ color: '#4B5563' }}>
                     For texting
@@ -182,15 +182,15 @@ const Footer: React.FC = () => {
               </Box>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                 <EmailIcon sx={{ color: primaryColor }} />
-                <Link href="mailto:info@ticklelaw.com" color="inherit" sx={{ textDecoration: 'none', '&:hover': { color: theme.palette.primary.light } }}>
-                  info@ticklelaw.com
+                <Link href="mailto:info@lawfirm.com" color="inherit" sx={{ textDecoration: 'none', '&:hover': { color: theme.palette.primary.light } }}>
+                  info@lawfirm.com
                 </Link>
               </Box>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                 <LocationOnIcon sx={{ color: primaryColor }} />
                 <Typography variant="body2" sx={{ color: '#4B5563' }}>
-                  105 S. Main Street<br />
-                  Louisburg, NC 27549
+                  123 Main Street<br />
+                  Your City, ST 12345
                 </Typography>
               </Box>
             </Box>
@@ -202,7 +202,7 @@ const Footer: React.FC = () => {
           <Grid container spacing={2} alignItems="center" justifyContent="space-between">
             <Grid item>
               <Typography variant="body2" color="text.secondary">
-                © {new Date().getFullYear()} Tickle Law Office. All rights reserved.
+                © {new Date().getFullYear()} Law Firm Template. All rights reserved.
               </Typography>
             </Grid>
             <Grid item>

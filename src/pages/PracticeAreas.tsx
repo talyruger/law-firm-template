@@ -75,7 +75,7 @@ const PracticeAreas: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Practice Areas | Tickle Law Office</title>
+        <title>Our Practice Areas | Law Firm</title>
         <meta name="description" content="Explore our practice areas including family law, criminal defense, estate planning, and business law services." />
       </Helmet>
 
@@ -95,7 +95,7 @@ const PracticeAreas: React.FC = () => {
             Our Practice Areas
           </Typography>
           <Typography paragraph color="text.secondary">
-            At Tickle Law Office, we provide comprehensive legal services across multiple practice areas. Our experienced attorneys are dedicated to helping you navigate complex legal matters with confidence and peace of mind.
+            Our law firm provides comprehensive legal services across multiple practice areas. Our experienced attorneys are dedicated to helping you navigate complex legal matters with confidence and peace of mind.
           </Typography>
         </Paper>
 
@@ -184,4 +184,4 @@ const PracticeAreas: React.FC = () => {
   );
 };
 
-export default PracticeAreas; 
+export default PracticeAreas;

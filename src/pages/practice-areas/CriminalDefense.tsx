@@ -38,8 +38,8 @@ const CriminalDefense: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Criminal Defense | Tickle Law Office</title>
-        <meta name="description" content="Professional criminal defense services in Franklin County, North Carolina. We handle traffic violations, DWI, misdemeanors, felonies, and more." />
+        <title>Criminal Defense | Law Firm</title>
+        <meta name="description" content="Aggressive criminal defense services. Protecting your rights and future." />
       </Helmet>
 
       {/* Breadcrumb */}
@@ -78,10 +78,6 @@ const CriminalDefense: React.FC = () => {
               Any criminal charge could change your life for the worse. In addition to any penalties, a conviction could damage your educational or employment prospects. Despite what may be at stake, this is not a time to panic. Hiring a skilled, aggressive criminal defense lawyer can make a great difference.
             </Typography>
 
-            <Typography paragraph>
-              Call our firm's attorney, Lawrence Tickle (or "Tickle" as his clients call him). From our office in Louisburg, we represent clients across Franklin County and beyond.
-            </Typography>
-
             <Typography variant="h5" gutterBottom sx={{ mt: 4, color: 'primary.main' }}>
               Let Us Help You Defend Your Rights
             </Typography>
@@ -112,7 +108,7 @@ const CriminalDefense: React.FC = () => {
             <Box sx={{ display: 'flex', gap: 2, mt: 4 }}>
               <Button
                 component="a"
-                href="tel:9194961201"
+                href="tel:0000000000"
                 variant="contained"
                 color="primary"
                 startIcon={<PhoneIcon />}
@@ -136,4 +132,4 @@ const CriminalDefense: React.FC = () => {
   );
 };
 
-export default CriminalDefense; 
+export default CriminalDefense;

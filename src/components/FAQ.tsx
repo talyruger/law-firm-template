@@ -43,8 +43,8 @@ interface FAQItem {
 
 const faqItems: FAQItem[] = [
   {
-    question: "What areas of law does Tickle Law Office practice?",
-    answer: "Tickle Law Office specializes in several key practice areas to serve our community in Louisburg and surrounding areas. Our primary focus includes Family Law (divorce, child custody, and support), Criminal Defense (traffic violations, misdemeanors, and felonies), Estate Planning (wills, trusts, and probate), and Personal Injury cases. We also handle Real Estate matters and provide general legal counsel. Our experienced attorneys are dedicated to providing comprehensive legal solutions tailored to your specific needs.",
+    question: "What areas of law does your law firm practice?",
+    answer: "Our law firm specializes in several key practice areas to serve our community. Our primary focus includes Family Law (divorce, child custody, and support), Criminal Defense (traffic violations, misdemeanors, and felonies), Estate Planning (wills, trusts, and probate), and Personal Injury cases. We also handle Real Estate matters and provide general legal counsel. Our experienced attorneys are dedicated to providing comprehensive legal solutions tailored to your specific needs.",
     category: "General"
   },
   {
@@ -63,13 +63,13 @@ const faqItems: FAQItem[] = [
     category: "General"
   },
   {
-    question: "Do you handle cases outside of Franklin County?",
-    answer: "Yes, we handle cases throughout North Carolina, though our primary service area is Franklin County and surrounding regions. Our attorneys are licensed to practice in all North Carolina state courts. We regularly represent clients in Wake, Nash, Vance, and other neighboring counties. For cases outside our immediate area, we may charge additional travel fees, which will be clearly explained during your initial consultation. We're committed to providing the same high-quality legal representation regardless of where your case is heard.",
+    question: "Do you handle cases outside of my local area?",
+    answer: "Yes, we handle cases throughout the region, though our primary service area is the local community and surrounding regions. Our attorneys are licensed to practice in all state courts. We regularly represent clients in neighboring counties. For cases outside our immediate area, we may charge additional travel fees, which will be clearly explained during your initial consultation. We're committed to providing the same high-quality legal representation regardless of where your case is heard.",
     category: "General"
   },
   {
-    question: "What makes Tickle Law Office different from other law firms?",
-    answer: "Tickle Law Office stands out through our commitment to personalized service, local expertise, and family values. With over 20 years of experience in Franklin County, we have deep roots in the community and understand the local legal landscape. Our attorneys combine traditional legal expertise with modern technology to provide efficient, effective representation. We pride ourselves on being accessible to our clients, providing regular updates, and maintaining clear communication throughout your case. Our firm is also known for its compassionate approach to sensitive legal matters, particularly in family law and criminal defense cases.",
+    question: "What makes your law firm different from other law firms?",
+    answer: "Our law firm stands out through our commitment to personalized service, local expertise, and client-focused values. With years of experience, we understand the legal landscape and provide efficient, effective representation. We pride ourselves on being accessible to our clients, providing regular updates, and maintaining clear communication throughout your case. Our firm is also known for its compassionate approach to sensitive legal matters, particularly in family law and criminal defense cases.",
     category: "General"
   },
   {
@@ -216,4 +216,4 @@ const FAQ: React.FC = () => {
   );
 };
 
-export default FAQ; 
+export default FAQ;

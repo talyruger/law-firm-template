@@ -46,8 +46,8 @@ const FamilyLaw: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Family Law | Tickle Law Office</title>
-        <meta name="description" content="Professional family law services in Franklin County, North Carolina. We handle divorce, child custody, support, and other family matters." />
+        <title>Family Law | Law Firm</title>
+        <meta name="description" content="Professional family law services. We handle divorce, child custody, support, and other family matters." />
       </Helmet>
 
       {/* Breadcrumb */}
@@ -83,7 +83,7 @@ const FamilyLaw: React.FC = () => {
             </Typography>
 
             <Typography paragraph>
-              Any type of legal matter has the potential to make your life difficult. Whether you are going through a divorce, have been injured or have some other type of legal problem, it is important to have someone on your side who understands what it takes to achieve a successful outcome. Attorney Lawrence Tickle (or "Tickle" as his clients call him) of the Tickle Law Office, in Louisburg, North Carolina, represent people across Franklin County and the surrounding counties. Our firm helps people facing nearly every type of civil or criminal legal issue.
+              Any type of legal matter has the potential to make your life difficult. Whether you are going through a divorce, have been injured or have some other type of legal problem, it is important to have someone on your side who understands what it takes to achieve a successful outcome. Our attorneys represent people across the region and help clients facing nearly every type of civil or criminal legal issue.
             </Typography>
 
             <Typography variant="h5" gutterBottom sx={{ mt: 4, color: 'primary.main' }}>
@@ -118,7 +118,7 @@ const FamilyLaw: React.FC = () => {
             </Typography>
 
             <Typography variant="h5" gutterBottom sx={{ mt: 4, color: 'primary.main' }}>
-              Contact Tickle Law Office, To Learn More
+              Contact Us To Learn More
             </Typography>
 
             <Typography paragraph>
@@ -128,7 +128,7 @@ const FamilyLaw: React.FC = () => {
             <Box sx={{ display: 'flex', gap: 2, mt: 3 }}>
               <Button
                 component="a"
-                href="tel:9194961201"
+                href="tel:0000000000"
                 variant="contained"
                 color="primary"
                 startIcon={<PhoneIcon />}
@@ -152,4 +152,4 @@ const FamilyLaw: React.FC = () => {
   );
 };
 
-export default FamilyLaw; 
+export default FamilyLaw;

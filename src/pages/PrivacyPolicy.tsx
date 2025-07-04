@@ -6,8 +6,8 @@ const PrivacyPolicy: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Privacy Policy | Tickle Law Office</title>
-        <meta name="description" content="Privacy Policy for Tickle Law Office website." />
+        <title>Privacy Policy | Law Firm</title>
+        <meta name="description" content="Privacy Policy for our law firm website." />
       </Helmet>
 
       {/* Breadcrumb */}
@@ -32,7 +32,7 @@ const PrivacyPolicy: React.FC = () => {
             Introduction
           </Typography>
           <Typography paragraph color="text.secondary">
-            Tickle Law Office ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.
+            Our law firm ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.
           </Typography>
 
           <Typography variant="h5" gutterBottom sx={{ mt: 4 }}>
@@ -119,12 +119,11 @@ const PrivacyPolicy: React.FC = () => {
             If you have any questions about this Privacy Policy, please contact us at:
           </Typography>
           <Typography paragraph color="text.secondary">
-            Tickle Law Office<br />
-            105 S. Main Street<br />
-            Louisburg, NC 27549<br />
-            Phone: (919) 496-1201 (calls)<br />
-            Text: (919) 229-9265<br />
-            Email: info@ticklelaw.com
+            Law Firm Template<br />
+            123 Main Street<br />
+            Your City, ST 12345<br />
+            Phone: (000) 000-0000<br />
+            Email: info@lawfirm.com
           </Typography>
         </Paper>
       </Container>

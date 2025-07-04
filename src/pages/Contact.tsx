@@ -36,8 +36,8 @@ const Contact: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us | Tickle Law Office</title>
-        <meta name="description" content="Contact Tickle Law Office for legal assistance. Schedule a consultation with our experienced attorneys." />
+        <title>Contact Us | Law Firm</title>
+        <meta name="description" content="Contact our law firm for legal assistance. Schedule a consultation with our experienced attorneys." />
       </Helmet>
 
       {/* Breadcrumb */}
@@ -87,8 +87,8 @@ const Contact: React.FC = () => {
                   <PhoneIcon sx={{ mr: 2, color: 'white' }} />
                   <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                     <Typography sx={{ color: 'white', fontWeight: '500' }}>
-                      <a href="tel:9194961201" style={{ textDecoration: 'none', color: 'inherit' }}>
-                        (919) 496-1201
+                      <a href="tel:0000000000" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        (000) 000-0000
                       </a>
                     </Typography>
                     <Typography variant="caption" sx={{ color: 'white', opacity: 0.8 }}>
@@ -100,8 +100,8 @@ const Contact: React.FC = () => {
                   <SmsIcon sx={{ mr: 2, color: 'white' }} />
                   <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                     <Typography sx={{ color: 'white', fontWeight: '500' }}>
-                      <a href="sms:9192299265" style={{ textDecoration: 'none', color: 'inherit' }}>
-                        (919) 229-9265
+                      <a href="sms:0000000000" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        (000) 000-0000
                       </a>
                     </Typography>
                     <Typography variant="caption" sx={{ color: 'white', opacity: 0.8 }}>
@@ -112,14 +112,14 @@ const Contact: React.FC = () => {
                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 2.5 }}>
                   <PhoneIcon sx={{ mr: 2, color: 'white' }} />
                   <Typography sx={{ color: 'white', fontWeight: '500' }}>
-                    Fax: (919) 800-3002
+                    Fax: (000) 000-0000
                   </Typography>
                 </Box>
                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 2.5 }}>
                   <EmailIcon sx={{ mr: 2, color: 'white' }} />
                   <Typography sx={{ color: 'white', fontWeight: '500' }}>
-                    <a href="mailto:info@ticklelaw.com" style={{ textDecoration: 'none', color: 'inherit' }}>
-                      info@ticklelaw.com
+                    <a href="mailto:info@lawfirm.com" style={{ textDecoration: 'none', color: 'inherit' }}>
+                      info@lawfirm.com
                     </a>
                   </Typography>
                 </Box>
@@ -127,13 +127,13 @@ const Contact: React.FC = () => {
                   <LocationOnIcon sx={{ mr: 2, color: 'white' }} />
                   <Typography sx={{ color: 'white', fontWeight: '500' }}>
                     <Link
-                      href="https://www.google.com/maps/search/?api=1&query=105+S+Main+St+Louisburg+NC+27549"
+                      href="#"
                       target="_blank"
                       rel="noopener noreferrer"
                       sx={{ textDecoration: 'none', color: 'inherit', '&:hover': { textDecoration: 'underline' } }}
                     >
-                      105 S. Main Street<br />
-                      Louisburg, NC 27549
+                      123 Main Street<br />
+                      Your City, ST 12345
                     </Link>
                   </Typography>
                 </Box>
@@ -141,7 +141,7 @@ const Contact: React.FC = () => {
                   <FacebookIcon sx={{ mr: 2, color: 'white' }} />
                   <Typography sx={{ color: 'white', fontWeight: '500' }}>
                     <Link
-                      href="https://www.facebook.com/ticklelawoffice/"
+                      href="#"
                       target="_blank"
                       rel="noopener noreferrer"
                       sx={{ textDecoration: 'none', color: 'inherit', '&:hover': { textDecoration: 'underline' } }}
@@ -154,14 +154,14 @@ const Contact: React.FC = () => {
 
               <Box sx={{ mt: 3, mb: 3 }}>
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3233.1234567890123!2d-78.30123456789012!3d36.09876543210987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89ac5f1234567890%3A0xabcdef1234567890!2s105%20S%20Main%20St%2C%20Louisburg%2C%20NC%2027549!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                  src=""
                   width="100%"
                   height="200"
                   style={{ border: 0, borderRadius: '4px' }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Tickle Law Office Location"
+                  title="Law Firm Location"
                 />
               </Box>
 

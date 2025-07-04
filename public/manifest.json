@@ -1,20 +1,20 @@
 {
-  "short_name": "Tickle Law",
-  "name": "Tickle Law Office",
+  "short_name": "Law Firm",
+  "name": "Law Firm Template",
   "icons": [
     {
-      "src": "images/logo.png",
+      "src": "images/logo-new.svg",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/png"
+      "type": "image/svg+xml"
     },
     {
-      "src": "images/logo.png",
-      "type": "image/png",
+      "src": "images/logo-new.svg",
+      "type": "image/svg+xml",
       "sizes": "192x192"
     },
     {
-      "src": "images/logo.png",
-      "type": "image/png",
+      "src": "images/logo-new.svg",
+      "type": "image/svg+xml",
       "sizes": "512x512"
     }
   ],
@@ -22,4 +22,4 @@
   "display": "standalone",
   "theme_color": "#1B365D",
   "background_color": "#ffffff"
-} 
+}

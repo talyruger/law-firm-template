@@ -7,8 +7,8 @@ const FAQPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Frequently Asked Questions | Tickle Law Office</title>
-        <meta name="description" content="Find answers to common questions about our legal services, consultation process, and more at Tickle Law Office." />
+        <title>Frequently Asked Questions | Law Firm</title>
+        <meta name="description" content="Find answers to common questions about our legal services, consultation process, and more." />
       </Helmet>
 
       <Box sx={{ py: 6, bgcolor: 'sectionBackground.light' }}>

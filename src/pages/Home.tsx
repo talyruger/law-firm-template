@@ -71,71 +71,40 @@ const practiceAreas: PracticeArea[] = [
 
 const attorneys: Attorney[] = [
   { 
-    name: 'Lawrence Edward Tickle Jr.', 
-    image: '/images/lawrence.jpg',
-    link: '/attorneys/lawrence'
+    name: 'Attorney Name 1', 
+    image: '/images/attorney-headshot-1.svg',
+    link: '/attorneys/attorney1'
   },
   { 
-    name: 'Kaitlyn L. Tickle', 
-    image: '/images/kaitlyn.jpg',
-    link: '/attorneys/kaitlyn'
+    name: 'Attorney Name 2', 
+    image: '/images/attorney-headshot-2.svg',
+    link: '/attorneys/attorney2'
   },
   { 
-    name: 'Charlotte Murphy', 
-    image: '/images/charlotte.jpg',
-    link: '/attorneys/charlotte'
+    name: 'Attorney Name 3', 
+    image: '/images/attorney-headshot-3.svg',
+    link: '/attorneys/attorney3'
   },
 ];
 
 const reviews: Review[] = [
   {
-    author: 'Timothy Stroud',
-    reviewCount: '3 reviews',
-    date: 'a month ago',
-    text: 'Mr Tickle and his team were truly exceptional! They handled my child custody case with sensitivity and professionalism. They were always responsive to my questions and concerns, and they fought tirelessly for my child\'s best interests. I am eternally grateful for their help. Highly reccomend to anybody going through similar issues!',
+    author: 'A Satisfied Client',
+    reviewCount: '',
+    date: 'Recently',
+    text: 'The attorneys at this law firm were exceptional! They handled my case with sensitivity and professionalism. I am grateful for their help and highly recommend them to anyone in need of legal services.',
     reply: {
-      author: 'Tickle Law Office, PC (Owner)',
-      text: 'Thanks Tim. Glad to help a great parent.',
-      date: 'a month ago'
+      author: 'Law Firm (Owner)',
+      text: 'Thank you for your kind words. We are always here to help.',
+      date: 'Recently'
     }
   },
   {
-    author: 'Sherry Montague',
-    reviewCount: '5 reviews',
-    date: '2 months ago',
-    text: 'The Tickle Law Firm was most helpful with my ticket. I had a very favorable out come using his law office. The communication was excellent in keeping me informed with the process. Thank you Tickle Law Office. I recommend them highly and will use them again for another matter.'
+    author: 'Another Client',
+    reviewCount: '',
+    date: 'Recently',
+    text: 'This law firm was very helpful with my legal matter. The communication was excellent and I recommend them highly.',
   },
-  {
-    author: 'Kimberly Bland',
-    reviewCount: '10 reviews',
-    photoCount: '1 photo',
-    date: '3 months ago',
-    text: 'Mr Tickle has been nothing but professional and has handled all of my cases with no anxiety to me, he has always let me know that I have nothing to worry about and I can consider it taken care of! And I can not talk more fondly of his receptionist, she is the nicest and sweetest receptionist I\'ve ever had the pleasure of dealing with, she has always made sure to answer all my questions, to help with my anxiety. They have made me a forever fan and will be back to see him if I seem to get myself into any more trouble.',
-    reply: {
-      author: 'Tickle Law Office, PC (Owner)',
-      text: 'Thanks Kimberly!',
-      date: '3 months ago'
-    }
-  },
-  {
-    author: 'Alexis Jones',
-    reviewCount: '3 reviews',
-    date: 'a month ago',
-    text: 'My traffic issue was handled by Tickle Law Office. They handled my experience with expertise in a timely professional courteous manner. If this unfortunate situation should reoccur, which I truly hope it will not, I would not hesitate to contact them.'
-  },
-  {
-    author: 'george bunn jr',
-    reviewCount: '10 reviews',
-    date: '3 months ago',
-    text: 'Mr. Tickle was great he sat down and explained everything to my mother. I made her comfortable and ensured she understood everything regarding the POA\'s and Trust. I highly recommend him.'
-  },
-  {
-    author: 'Kimberly Knapp',
-    reviewCount: '4 reviews',
-    photoCount: '1 photo',
-    date: '3 months ago',
-    text: 'Mr. Tickle and his paralegal Nicki Parnell helped me. From the first point of contact all the way through the process, I was supported. I highly recommend them. When you\'re in a pickle, call Tickle! I\'m sure I\'m not the first to say that but it\'s actually very true!'
-  }
 ];
 
 const Home: React.FC = () => {
@@ -144,8 +113,8 @@ const Home: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>{firm.name} | Professional Legal Services</title>
-        <meta name="description" content={firm.description} />
+        <title>Home | Law Firm</title>
+        <meta name="description" content="Professional legal services for individuals and businesses. Our experienced attorneys are here to help you with your legal needs." />
       </Helmet>
 
       {/* Hero Section */}
@@ -187,7 +156,7 @@ const Home: React.FC = () => {
               We're Here For You
             </Typography>
             <Typography variant="h6" paragraph sx={{ color: '#FFFFFF' }}>
-              Tickle Law Office provides legal solutions for many of the legal issues a family may encounter.
+              Our law firm provides legal solutions for many of the legal issues a family may encounter.
             </Typography>
             <Button 
               component={RouterLink}
@@ -282,7 +251,7 @@ const Home: React.FC = () => {
             If you are facing a serious legal matter, you must make an important decision. The attorney you choose can significantly impact the way your legal matter is resolved. It is important to hire a lawyer who will give you the support and counsel you need. It is equally important to hire a lawyer who will treat you with the respect you deserve.
           </Typography>
           <Typography paragraph color="text.secondary">
-            At Tickle Law Office, our firm's attorneys became lawyers so they could make a positive impact in other people's lives. Based in Louisburg, North Carolina, we serve clients throughout Franklin County, including Youngsville, Bunn and Franklinton.
+            At our law firm, our attorneys became lawyers so they could make a positive impact in other people's lives. Based in [Your City], we serve clients throughout the region.
           </Typography>
         </Paper>
         
@@ -322,11 +291,11 @@ const Home: React.FC = () => {
                       }}
                     >
                       <img
-                        src={`/images/${attorney.name.split(' ')[0].toLowerCase()}.jpg`}
+                        src={attorney.image}
                         alt={attorney.name}
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;
-                          target.src = '/images/placeholder-attorney.jpg';
+                          target.src = '/images/attorney-headshot-1.svg';
                         }}
                       />
                     </Box>
@@ -520,7 +489,7 @@ const Home: React.FC = () => {
               size="large"
               startIcon={<GoogleIcon />}
               component="a" 
-              href="https://www.google.com/search?q=Tickle+Law+Office+reviews" 
+              href="#" 
               target="_blank"
               rel="noopener noreferrer"
               sx={{ 
@@ -544,4 +513,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home; 
+export default Home;

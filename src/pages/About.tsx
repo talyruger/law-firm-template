@@ -5,9 +5,9 @@ import { Helmet } from 'react-helmet-async';
 
 const About: React.FC = () => {
   const attorneys = [
-    { name: 'Lawrence Edward Tickle Jr.', link: '/attorneys/lawrence' },
-    { name: 'Kaitlyn L. Tickle', link: '/attorneys/kaitlyn' },
-    { name: 'Charlotte Murphy', link: '/attorneys/charlotte' },
+    { name: 'Attorney Name 1', link: '/attorneys/attorney1', image: '/images/attorney-headshot-1.svg' },
+    { name: 'Attorney Name 2', link: '/attorneys/attorney2', image: '/images/attorney-headshot-2.svg' },
+    { name: 'Attorney Name 3', link: '/attorneys/attorney3', image: '/images/attorney-headshot-3.svg' },
   ];
 
   const practiceAreas = [
@@ -22,8 +22,8 @@ const About: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>About Us | Tickle Law Office</title>
-        <meta name="description" content="Learn about Tickle Law Office, our experienced attorneys, and our commitment to providing quality legal services." />
+        <title>About Our Law Firm</title>
+        <meta name="description" content="Learn more about our law firm, our mission, and our commitment to serving clients with integrity and professionalism." />
       </Helmet>
 
       {/* Breadcrumb */}
@@ -39,13 +39,13 @@ const About: React.FC = () => {
         {/* Introduction */}
         <Paper sx={{ p: 4, mb: 6 }}>
           <Typography variant="h4" gutterBottom>
-            About Tickle Law Office
+            About Our Law Firm
           </Typography>
           <Typography paragraph color="text.secondary">
-            Our firm was founded in 2013 by attorney Lawrence Tickle.
+            Our firm was founded in 20XX by experienced attorneys dedicated to providing high-quality legal services.
           </Typography>
           <Typography paragraph color="text.secondary">
-            The attorneys at Tickle Law Office help people work through some of life's biggest challenges. We can help you with various legal matters including family law, civil law and criminal law. Whatever your needs, we will do our best to accomplish your specific goals and move toward a brighter future.
+            The attorneys at our firm help people work through some of life's biggest challenges. We can help you with various legal matters including family law, civil law, and criminal law. Whatever your needs, we will do our best to accomplish your specific goals and move toward a brighter future.
           </Typography>
         </Paper>
 
@@ -88,11 +88,11 @@ const About: React.FC = () => {
                       }}
                     >
                       <img
-                        src={`/images/${attorney.name.split(' ')[0].toLowerCase()}.jpg`}
+                        src={attorney.image}
                         alt={attorney.name}
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;
-                          target.src = '/images/placeholder-attorney.jpg';
+                          target.src = '/images/attorney-headshot-1.svg';
                         }}
                       />
                     </Box>
@@ -112,7 +112,7 @@ const About: React.FC = () => {
             Schedule a Consultation
           </Typography>
           <Typography paragraph>
-            Call (919) 496-1201 to schedule a consultation. You can also complete our online contact form to get started.
+            Call (000) 000-0000 to schedule a consultation. You can also complete our online contact form to get started.
           </Typography>
           <Button
             component={RouterLink}
@@ -148,4 +148,4 @@ const About: React.FC = () => {
   );
 };
 
-export default About; 
+export default About;

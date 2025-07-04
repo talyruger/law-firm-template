@@ -6,8 +6,8 @@ const Disclaimer: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Disclaimer | Tickle Law Office</title>
-        <meta name="description" content="Legal disclaimer for Tickle Law Office website." />
+        <title>Disclaimer | Law Firm</title>
+        <meta name="description" content="Legal disclaimer for our law firm website." />
       </Helmet>
 
       {/* Breadcrumb */}
@@ -77,12 +77,11 @@ const Disclaimer: React.FC = () => {
             If you have any questions about this disclaimer, please contact us at:
           </Typography>
           <Typography paragraph color="text.secondary">
-            Tickle Law Office<br />
-            105 S. Main Street<br />
-            Louisburg, NC 27549<br />
-            Phone: (919) 496-1201 (calls)<br />
-            Text: (919) 229-9265<br />
-            Email: info@ticklelaw.com
+            Law Firm Template<br />
+            123 Main Street<br />
+            Your City, ST 12345<br />
+            Phone: (000) 000-0000<br />
+            Email: info@lawfirm.com
           </Typography>
         </Paper>
       </Container>

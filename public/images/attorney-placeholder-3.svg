@@ -1,0 +1,23 @@
+<svg width="400" height="500" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="500" fill="#fafbfc"/>
+  
+  <!-- Head circle -->
+  <circle cx="200" cy="180" r="80" fill="#f0f2f5" stroke="#e4e6ea" stroke-width="2"/>
+  
+  <!-- Body rectangle -->
+  <rect x="120" y="250" width="160" height="200" fill="#f0f2f5" stroke="#e4e6ea" stroke-width="2"/>
+  
+  <!-- Professional clothing -->
+  <rect x="140" y="260" width="120" height="180" fill="#65676b"/>
+  <rect x="180" y="260" width="40" height="150" fill="#42434a"/>
+  
+  <!-- Face -->
+  <circle cx="180" cy="165" r="8" fill="#65676b"/>
+  <circle cx="220" cy="165" r="8" fill="#65676b"/>
+  <path d="M 185 190 Q 200 200 215 190" stroke="#65676b" stroke-width="3" fill="none"/>
+  
+  <!-- Text -->
+  <text x="200" y="470" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#42434a">ATTORNEY</text>
+  <text x="200" y="490" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#65676b">PLACEHOLDER</text>
+</svg>

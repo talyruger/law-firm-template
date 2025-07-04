@@ -49,7 +49,7 @@ interface SiteContent {
 
 const siteContent: SiteContent = {
   firm: {
-    name: "Tickle Law Office",
+    name: "Law Firm Template",
     tagline: "Dedicated to Excellence in Legal Representation",
     description: "A premier law firm dedicated to providing exceptional legal services with integrity and professionalism.",
     founded: 1995,
@@ -120,46 +120,46 @@ const siteContent: SiteContent = {
   ],
   team: [
     {
-      name: "John Tickle",
+      name: "Attorney Name 1",
       position: "Managing Partner",
-      bio: "With over 25 years of experience, John leads our firm with expertise and dedication.",
-      image: "/images/team/john-tickle.jpg",
+      bio: "With over 25 years of experience, Attorney Name 1 leads our firm with expertise and dedication.",
+      image: "/images/attorney-headshot-1.svg",
       specialties: ["Family Law", "Criminal Defense"],
       education: [
-        "J.D., Harvard Law School",
-        "B.A., Yale University"
+        "J.D., Law School",
+        "B.A., University"
       ],
       barAdmissions: [
-        "State Bar of California",
+        "State Bar",
         "U.S. Supreme Court"
       ]
     },
     {
-      name: "Sarah Johnson",
+      name: "Attorney Name 2",
       position: "Senior Associate",
-      bio: "Sarah specializes in personal injury cases and has a proven track record of success.",
-      image: "/images/team/sarah-johnson.jpg",
+      bio: "Attorney Name 2 specializes in personal injury cases and has a proven track record of success.",
+      image: "/images/attorney-headshot-2.svg",
       specialties: ["Personal Injury", "Medical Malpractice"],
       education: [
-        "J.D., Stanford Law School",
-        "B.S., University of California"
+        "J.D., Law School",
+        "B.S., University"
       ],
       barAdmissions: [
-        "State Bar of California"
+        "State Bar"
       ]
     },
     {
-      name: "Michael Chen",
+      name: "Attorney Name 3",
       position: "Associate Attorney",
-      bio: "Michael brings fresh perspectives and innovative solutions to complex legal challenges.",
-      image: "/images/team/michael-chen.jpg",
+      bio: "Attorney Name 3 brings fresh perspectives and innovative solutions to complex legal challenges.",
+      image: "/images/attorney-headshot-3.svg",
       specialties: ["Estate Planning", "Probate"],
       education: [
-        "J.D., University of Michigan",
-        "B.A., University of Chicago"
+        "J.D., Law School",
+        "B.A., University"
       ],
       barAdmissions: [
-        "State Bar of California"
+        "State Bar"
       ]
     }
   ],
@@ -167,12 +167,12 @@ const siteContent: SiteContent = {
     address: {
       street: "123 Legal Avenue",
       suite: "Suite 500",
-      city: "San Francisco",
-      state: "CA",
-      zip: "94105"
+      city: "Your City",
+      state: "ST",
+      zip: "12345"
     },
-    phone: "(555) 123-4567",
-    email: "info@ticklelaw.com",
+    phone: "(000) 000-0000",
+    email: "info@lawfirm.com",
     hours: {
       weekday: "Monday - Friday: 9:00 AM - 5:00 PM",
       weekend: "Saturday - Sunday: Closed"

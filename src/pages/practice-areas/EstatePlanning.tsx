@@ -46,8 +46,8 @@ const EstatePlanning: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Estate Planning | Tickle Law Office</title>
-        <meta name="description" content="Professional estate planning services in Franklin County, North Carolina. We handle wills, trusts, powers of attorney, and other estate planning documents." />
+        <title>Estate Planning | Law Firm</title>
+        <meta name="description" content="Comprehensive estate planning services. Wills, trusts, probate, and more." />
       </Helmet>
 
       {/* Breadcrumb */}
@@ -87,7 +87,7 @@ const EstatePlanning: React.FC = () => {
             </Typography>
 
             <Typography paragraph>
-              Get the answers to these and your other estate planning questions at Tickle Law Office. Led by our attorney, Lawrence Tickle, we help people in and around Franklin County, North Carolina, set up and adjust their estate plans. We will clear up any confusion you have and help you establish a customized plan to suit your final wishes.
+              Get the answers to these and your other estate planning questions at our law firm. We help people set up and adjust their estate plans. We will clear up any confusion you have and help you establish a customized plan to suit your final wishes.
             </Typography>
 
             <Typography variant="h5" gutterBottom sx={{ mt: 4, color: 'primary.main' }}>
@@ -128,7 +128,7 @@ const EstatePlanning: React.FC = () => {
             <Box sx={{ display: 'flex', gap: 2, mt: 4 }}>
               <Button
                 component="a"
-                href="tel:9194961201"
+                href="tel:0000000000"
                 variant="contained"
                 color="primary"
                 startIcon={<PhoneIcon />}
@@ -152,4 +152,4 @@ const EstatePlanning: React.FC = () => {
   );
 };
 
-export default EstatePlanning; 
+export default EstatePlanning;

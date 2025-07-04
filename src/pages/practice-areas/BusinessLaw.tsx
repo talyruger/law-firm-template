@@ -46,8 +46,8 @@ const BusinessLaw: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Business Law | Tickle Law Office</title>
-        <meta name="description" content="Professional business law services in Franklin County, North Carolina. We handle business formation, transactions, contracts, and litigation." />
+        <title>Business Law | Law Firm</title>
+        <meta name="description" content="Professional business law services. We handle business formation, transactions, contracts, and litigation." />
       </Helmet>
 
       {/* Breadcrumb */}
@@ -87,7 +87,7 @@ const BusinessLaw: React.FC = () => {
             </Typography>
 
             <Typography paragraph>
-              At Tickle Law Office, we represent closely held and family businesses in and around Franklin County. Whether you are starting a new business or your corporation has been around for years, attorney Lawrence Tickle (known simply as "Tickle") will act as your trusted adviser and representative in transactional matters, as well as litigation.
+              Our law firm represents closely held and family businesses in the region. Whether you are starting a new business or your corporation has been around for years, our attorneys will act as your trusted advisers and representatives in transactional matters, as well as litigation.
             </Typography>
 
             <Typography variant="h5" gutterBottom sx={{ mt: 4, color: 'primary.main' }}>
@@ -126,13 +126,13 @@ const BusinessLaw: React.FC = () => {
             </List>
 
             <Typography paragraph>
-              Smart business owners avoid unnecessary risk — including litigation. As your lawyer, Mr. Tickle can review and negotiate transactions to put you in the best possible position, while also minimizing the chances of a disagreement turning into a lawsuit. At the same time, when litigation becomes necessary, we will aggressively pursue your interests in court.
+              Smart business owners avoid unnecessary risk — including litigation. As your lawyer, we can review and negotiate transactions to put you in the best possible position, while also minimizing the chances of a disagreement turning into a lawsuit. At the same time, when litigation becomes necessary, we will aggressively pursue your interests in court.
             </Typography>
 
             <Box sx={{ display: 'flex', gap: 2, mt: 4 }}>
               <Button
                 component="a"
-                href="tel:9194961201"
+                href="tel:0000000000"
                 variant="contained"
                 color="primary"
                 startIcon={<PhoneIcon />}
@@ -156,4 +156,4 @@ const BusinessLaw: React.FC = () => {
   );
 };
 
-export default BusinessLaw; 
+export default BusinessLaw;
