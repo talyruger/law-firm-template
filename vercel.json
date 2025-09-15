@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "tickle-law-static",
+  "name": "law-firm-template",
   "builds": [
     {
       "src": "build/**",
@@ -12,4 +12,4 @@
     { "src": "/(.+\\.\\w+)$", "dest": "/build/$1" },
     { "src": "/(.*)", "dest": "/build/index.html" }
   ]
-} 
+}
